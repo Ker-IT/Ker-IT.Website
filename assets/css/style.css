@@ -1,99 +1,213 @@
-/* Reset basique */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* --- Variables & Reset --- */
+:root {
+    /* Couleurs inspirées de Photon mais adaptées Kër IT (Vert/Gris) */
+    --accent: #4CAF50; /* Un vert tech */
+    --accent-light: #81c784;
+    --text-color: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
+    --bg-overlay: rgba(0, 0, 0, 0.3);
+    
+    /* Police Photon */
+    --font-main: "Source Sans Pro", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-    background-color: var(--bg-color);
+    background: #111;
     color: var(--text-color);
     font-family: var(--font-main);
-    line-height: 1.6;
+    font-weight: 300;
+    line-height: 1.65;
+    font-size: 16pt; /* Photon utilise de grandes polices */
+    overflow-x: hidden;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Navbar */
-.navbar {
-    padding: 20px 0;
+/* Le fond fixe dégradé (Signature Photon) */
+.fixed-bg {
     position: fixed;
-    width: 100%;
-    top: 0;
-    background: rgba(10, 10, 10, 0.9);
+    top: 0; left: 0; width: 100%; height: 100vh;
+    z-index: -1;
+    /* Dégradé diagonal du gris foncé vers un vert sombre profond */
+    background-image: linear-gradient(45deg, #0f1014 20%, #0e2a1e 100%);
+    background-size: cover;
+}
+
+a { color: inherit; text-decoration: none; border-bottom: 1px dotted rgba(255,255,255,0.5); transition: color 0.2s, border 0.2s; }
+a:hover { color: var(--accent-light); border-bottom-color: transparent; }
+
+h1, h2, h3 { font-weight: 300; margin-bottom: 1em; line-height: 1.5; color: #fff; }
+h1 { font-size: 3em; letter-spacing: -0.025em; font-weight: 600; }
+h2 { font-size: 2em; letter-spacing: -0.025em; }
+
+ul { list-style-type: none;}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 2em; }
+.container.narrow { max-width: 800px; text-align: center; }
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    background: rgba(10, 10, 10, 0.8); /* Semi transparent */
     backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid #333;
+    padding: 0.8em 0;
+    z-index: 10000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+
+/* Logo Badge */
+.logo a { border: none; display: block; }
+.nav-logo {
+    height: 40px;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.nav-links { list-style: none; display: flex; gap: 1.5em; font-size: 0.9em; }
+.nav-links a { border: none; font-weight: 400; opacity: 0.7; }
+.nav-links a:hover { opacity: 1; }
+
+.lang-switch button {
+    background: none; border: none; color: #fff; cursor: pointer;
+    font-family: inherit; font-size: 1em; opacity: 0.6;
 }
+.lang-switch button:hover { opacity: 1; }
+.sep { opacity: 0.3; margin: 0 5px; }
 
-.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+/* --- Boutons (Style Photon: arrondis) --- */
+.btn {
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 3em;
+    color: #fff;
+    font-weight: 600;
+    height: 3em;
+    line-height: 2.7em;
+    padding: 0 2em;
+    text-align: center;
+    font-size: 0.9em;
+    transition: background 0.2s, color 0.2s;
+}
+.btn:hover { background: rgba(255,255,255,0.1); border-color: #fff; color: #fff; }
+.btn.small { height: 2.5em; line-height: 2.2em; font-size: 0.8em; }
 
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; }
-.nav-links button { background: none; border: none; color: var(--text-color); cursor: pointer; font-family: inherit; }
-.nav-links button:hover { color: var(--accent-color); }
-
-/* Hero */
-.hero {
-    height: 80vh;
+/* --- Hero Section --- */
+.hero-section {
+    min-height: 80vh; /* Grand écran d'accueil */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 4em;
+    position: relative;
 }
 
-.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -2px; }
-.hero p { font-size: 1.2rem; color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.hero-icon { font-size: 3em; color: var(--accent-light); margin-bottom: 0.5em; opacity: 0.8; }
+.hero-content p { font-size: 1.3em; margin-bottom: 2em; opacity: 0.8; }
 
-.btn.primary {
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.2s;
+/* --- Sections Contenu --- */
+.main-section {
+    padding: 6em 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    background: rgba(0, 0, 0, 0.2); /* Légèrement plus sombre */
 }
-.btn.primary:hover { transform: scale(1.05); }
 
-/* Sections */
-.section { padding: 100px 0; }
-.lead { font-size: 1.5rem; font-weight: 300; max-width: 800px; }
+/* En-tête de section avec la petite ligne en dessous */
+header.major { text-align: center; margin-bottom: 4em; }
+header.major h2 { position: relative; display: inline-block; padding-bottom: 1em; }
+header.major h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%; margin-left: -2em;
+    width: 4em; height: 2px;
+    background: #fff;
+    opacity: 0.3;
+}
 
-/* Grid Produits */
+/* --- Grid Ventures --- */
 .ventures-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
 }
 
-.venture-card {
-    background: var(--card-bg);
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #333;
-    transition: border-color 0.3s;
+.card {
+    background: rgba(255, 255, 255, 0.05); /* Fond vitré */
+    padding: 3em 2em;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    transition: transform 0.3s, background 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
-.venture-card:hover { border-color: var(--accent-color); }
+.card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
 
-.link-arrow { display: inline-block; margin-top: 20px; color: var(--accent-color); text-decoration: none; }
+.card-icon {
+    font-size: 2.5em;
+    color: var(--accent-light);
+    margin-bottom: 0.8em;
+}
 
-/* Footer */
-footer { border-top: 1px solid #333; padding: 50px 0; margin-top: 50px; }
-.footer-content { display: flex; justify-content: space-between; margin-bottom: 30px; }
-.footer-links a { display: block; color: #888; text-decoration: none; margin-bottom: 10px; }
-.copyright { text-align: center; color: #555; font-size: 0.8rem; }
+.card.placeholder { border-style: dashed; opacity: 0.6; }
 
-/* Mobile */
+/* --- Footer --- */
+#footer {
+    padding: 4em 0;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+}
+
+.icons { list-style: none; /*margin-bottom: 2em;*/ }
+.icons li { display: inline-block; padding: 0 1em; }
+.icons a { border: none; font-size: 1.5em; opacity: 0.5; }
+.icons a:hover { opacity: 1; }
+.label { display: none; } /* Cache le texte, garde l'icône */
+
+.footer-links a { font-size: 0.8em; opacity: 0.5; border: none; }
+.copyright { 
+    margin-top: 2em; 
+    font-size: 0.8em; 
+    opacity: 0.4; 
+    width: 100%;
+    text-align: center; /* Centré comme demandé */
+}
+
+/* Style spécifique pour les logos des produits dans les cartes */
+.venture-logo {
+    height: 50px;        /* Hauteur fixe pour l'uniformité */
+    width: auto;         /* Largeur s'adapte automatiquement */
+    object-fit: contain; /* Empêche l'image d'être écrasée */
+    margin-bottom: 10px; /* Un peu d'espace avant le titre */
+    
+    /* Optionnel : Une légère ombre pour la faire ressortir du fond vitré */
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+    
+    /* Optionnel : Si c'est une icône d'app carrée, on arrondit les bords */
+    border-radius: 18px; 
+}
+
+/* Ajustement du conteneur pour centrer l'image parfaitement */
+.card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em; /* Garde l'espacement original */
+}
+
+
+/* --- Mobile --- */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .nav-links { gap: 10px; font-size: 0.8rem; }
+    body { font-size: 14pt; }
+    h1 { font-size: 2.2em; }
+    .hero-section { min-height: 60vh; }
 }
