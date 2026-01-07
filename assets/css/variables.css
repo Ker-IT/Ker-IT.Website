@@ -1,8 +1,17 @@
 :root {
-    --bg-color: #0a0a0a;       /* Noir profond "Meta" */
-    --text-color: #f0f0f0;     /* Blanc cassé */
-    --accent-color: #3b82f6;   /* Bleu Tech */
-    --card-bg: #171717;        /* Gris très foncé */
-    --font-main: 'Inter', sans-serif;
-    --spacing: 2rem;
+    /* Palette Meta / Modern Tech */
+    --bg-color: #050505;       /* Noir presque pur pour le fond */
+    --bg-surface: #1c1c1e;     /* Gris foncé pour les cartes/navbar */
+    --text-color: #e4e6eb;     /* Blanc cassé (moins agressif pour les yeux) */
+    --text-muted: #b0b3b8;     /* Gris clair pour les sous-titres */
+    
+    /* Accent (Bleu Tech discret ou Blanc pur pour les boutons) */
+    --accent-color: #2f80ed;   
+    --btn-text: #000000;
+    
+    /* Dimensions */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --radius-card: 16px;       /* Arrondis plus prononcés */
+    --radius-btn: 8px;         /* Boutons un peu plus carrés (style pro) */
+    --nav-height: 70px;
 }

@@ -9,7 +9,7 @@ const translations = {
         vision_title: "Une Maison, Des Possibilités",
         vision_text: "Kër IT n'est pas une simple agence de développement. Nous sommes une holding technologique qui conçoit, développe et propulse ses propres produits. Notre mission est de simplifier le quotidien à travers des solutions logicielles robustes et intuitives.",
         ventures_title: "Nos Produits",
-        halfy_desc: "L'application qui révolutionne le partage de frais équitable. Disponible sur Android.",
+        halfy_desc: "L'application qui calcule le point de rencontre équitable entre deux adresses et suggère les meilleurs bars, restaurants et parcs pour se retrouver. Disponible sur Android.",
         next_project_title: "Prochain Projet",
         next_project_desc: "En cours de développement dans nos laboratoires.",
         footer_legal: "Société en cours de formation.",
@@ -21,8 +21,6 @@ const translations = {
             <p>Kër IT s'engage à protéger la vie privée des utilisateurs.</p>
             <h2>2. Données du site</h2>
             <p>Ce site vitrine ne collecte pas de cookies personnels.</p>
-            <h2>3. Contact</h2>
-            <p>Email: contact@ker-it.com</p>
         `
     },
     en: {
@@ -35,7 +33,7 @@ const translations = {
         vision_title: "One House, Infinite Possibilities",
         vision_text: "Kër IT is not just a development agency. We are a tech holding company that designs, develops, and propels its own products. Our mission is to simplify daily life through robust and intuitive software solutions.",
         ventures_title: "Our Ventures",
-        halfy_desc: "The app that revolutionizes fair expense sharing. Available on Android.",
+        halfy_desc: "The app that calculates the fair midpoint between two addresses and suggests the best bars, restaurants, and parks to meet up. Available on Android.",
         next_project_title: "Next Project",
         next_project_desc: "Currently under development in our labs.",
         footer_legal: "Company in formation.",
@@ -47,8 +45,6 @@ const translations = {
             <p>Kër IT is committed to protecting user privacy.</p>
             <h2>2. Website Data</h2>
             <p>This corporate website does not collect personal cookies.</p>
-            <h2>3. Contact</h2>
-            <p>Email: contact@ker-it.com</p>
         `
     }
 };
