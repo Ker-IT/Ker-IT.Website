@@ -1,3 +1,3 @@
-# Ker-IT
+# Kër IT
 
 Website of  Kër IT
