@@ -1,0 +1,99 @@
+/* Reset basique */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #333;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-weight: 800; font-size: 1.5rem; letter-spacing: -1px; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; }
+.nav-links button { background: none; border: none; color: var(--text-color); cursor: pointer; font-family: inherit; }
+.nav-links button:hover { color: var(--accent-color); }
+
+/* Hero */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 { font-size: 3.5rem; margin-bottom: 20px; font-weight: 800; letter-spacing: -2px; }
+.hero p { font-size: 1.2rem; color: #aaa; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.btn.primary {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+.btn.primary:hover { transform: scale(1.05); }
+
+/* Sections */
+.section { padding: 100px 0; }
+.lead { font-size: 1.5rem; font-weight: 300; max-width: 800px; }
+
+/* Grid Produits */
+.ventures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.venture-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: border-color 0.3s;
+}
+
+.venture-card:hover { border-color: var(--accent-color); }
+
+.link-arrow { display: inline-block; margin-top: 20px; color: var(--accent-color); text-decoration: none; }
+
+/* Footer */
+footer { border-top: 1px solid #333; padding: 50px 0; margin-top: 50px; }
+.footer-content { display: flex; justify-content: space-between; margin-bottom: 30px; }
+.footer-links a { display: block; color: #888; text-decoration: none; margin-bottom: 10px; }
+.copyright { text-align: center; color: #555; font-size: 0.8rem; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { gap: 10px; font-size: 0.8rem; }
+}

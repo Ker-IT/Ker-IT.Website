@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kër IT - Building the Digital Future</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Police Google Font style "Tech" -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Kër IT</div>
+            <ul class="nav-links">
+                <li><a href="#vision" data-i18n="nav_vision">Vision</a></li>
+                <li><a href="#ventures" data-i18n="nav_ventures">Produits</a></li>
+                <!-- <li><a href="#contact" data-i18n="nav_contact">Contact</a></li> -->
+                <li class="lang-switch">
+                    <button onclick="setLanguage('fr')">FR</button> | 
+                    <button onclick="setLanguage('en')">EN</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">L'incubateur de vos expériences numériques</h1>
+            <p data-i18n="hero_subtitle">Kër IT est la maison mère dédiée à la création d'infrastructures technologiques innovantes.</p>
+            <a href="#ventures" class="btn primary" data-i18n="hero_cta">Découvrir l'écosystème</a>
+        </div>
+    </header>
+
+    <!-- Vision Section -->
+    <section id="vision" class="section">
+        <div class="container">
+            <h2 data-i18n="vision_title">Une Maison, Des Possibilités</h2>
+            <p class="lead" data-i18n="vision_text">
+                Kër IT n'est pas une simple agence de développement. Nous sommes une holding technologique qui conçoit, développe et propulse ses propres produits. Notre mission est de simplifier le quotidien à travers des solutions logicielles robustes et intuitives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Ventures / Portfolio Section -->
+    <section id="ventures" class="section dark-bg">
+        <div class="container">
+            <h2 data-i18n="ventures_title">Nos Produits</h2>
+            <div class="ventures-grid">
+                
+                <!-- Produit 1: Halfy -->
+                <div class="venture-card">
+                    <div class="card-content">
+                        <h3>Halfy</h3>
+                        <p data-i18n="halfy_desc">L'application qui révolutionne le partage de frais équitable. Disponible sur Android.</p>
+                        <a href="https://halfy.app/" target="_blank" class="link-arrow">Halfy.app &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Produit 2: Futur -->
+                <div class="venture-card placeholder">
+                    <div class="card-content">
+                        <h3 data-i18n="next_project_title">Prochain Projet</h3>
+                        <p data-i18n="next_project_desc">En cours de développement dans nos laboratoires.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <h3>Kër IT</h3>
+                <p data-i18n="footer_legal">Société en cours de formation.</p>
+            </div>
+            <div class="footer-links">
+                <!-- <a href="mailto:contact@ker-it.com">contact@ker-it.com</a> -->
+                <a href="privacy.html" data-i18n="footer_privacy">Politique de confidentialité</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Kër IT. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

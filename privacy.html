@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kër IT - Privacy Policy</title>
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Petit style spécifique pour rendre le texte légal lisible */
+        .legal-text { color: #ccc; text-align: left; margin-top: 30px; }
+        .legal-text h2 { color: white; margin-top: 30px; font-size: 1.5rem; }
+        .legal-text p { margin-bottom: 15px; }
+        .legal-text ul { margin-left: 20px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html" style="color:white; text-decoration:none;">Kër IT</a></div>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav_vision">Vision</a></li>
+                <li><a href="ventures.html" data-i18n="nav_ventures">Produits</a></li>
+                <!-- <li><a href="#contact" data-i18n="nav_contact">Contact</a></li> -->
+                <li class="lang-switch">
+                    <button onclick="setLanguage('fr')">FR</button> | 
+                    <button onclick="setLanguage('en')">EN</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 150px;">
+        <div class="container legal-text">
+            <h1 data-i18n="privacy_title">Politique de Confidentialité</h1>
+            <p><em data-i18n="last_update">Dernière mise à jour : Janvier 2024</em></p>
+
+            <div data-i18n="privacy_content">
+                <!-- Contenu par défaut (sera remplacé par JS si traduction dispo, sinon reste affiché) -->
+                <p>Bienvenue sur le site web de Kër IT.</p>
+                <h2>1. Collecte de données</h2>
+                <p>Le site vitrine de Kër IT ne collecte aucune donnée personnelle directement (pas de cookies de tracking publicitaire, pas de compte utilisateur).</p>
+                
+                <h2>2. Applications tierces (Halfy)</h2>
+                <p>Nos produits, tels que Halfy, disposent de leurs propres politiques de confidentialité disponibles sur leurs sites respectifs ou au sein de l'application.</p>
+
+                <!-- <h2>3. Contact</h2>
+                <p>Pour toute question concernant vos données, veuillez nous contacter à : contact@ker-it.com</p> -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container copyright">&copy; 2024 Kër IT.</div>
+    </footer>
+
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
