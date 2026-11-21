@@ -1,0 +1,26 @@
+{%- set t = i18n[locale] -%}
+{%- set homePath = site.routes.home[locale] -%}
+
+<section class="legal-section">
+  <div class="container container-narrow">
+    <p class="legal-back">
+      <a href="{{ homePath | url }}" class="text-link">&larr; {{ t.privacy.backHome }}</a>
+    </p>
+
+    <header class="legal-header">
+      <h1 class="legal-title">{{ t.privacy.title }}</h1>
+      <p class="meta-line">{{ t.privacy.lastUpdated }}</p>
+    </header>
+
+    <div class="legal-body">
+      {%- for block in t.privacy.sections -%}
+        <section class="legal-block">
+          <h2>{{ block.heading }}</h2>
+          {%- for paragraph in block.paragraphs -%}
+            <p>{{ paragraph }}</p>
+          {%- endfor -%}
+        </section>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

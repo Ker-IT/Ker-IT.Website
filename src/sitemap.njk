@@ -1,0 +1,42 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>{{ site.routes.home.en | absUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.routes.home.en | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.routes.home.fr | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.routes.home.en | absUrl }}" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>{{ site.routes.home.fr | absUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.routes.home.en | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.routes.home.fr | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.routes.home.en | absUrl }}" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>{{ site.routes.privacy.en | absUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.routes.privacy.en | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.routes.privacy.fr | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.routes.privacy.en | absUrl }}" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>{{ site.routes.privacy.fr | absUrl }}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.routes.privacy.en | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="fr" href="{{ site.routes.privacy.fr | absUrl }}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.routes.privacy.en | absUrl }}" />
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

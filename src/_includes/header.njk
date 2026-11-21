@@ -1,0 +1,59 @@
+{%- set t = i18n[locale] -%}
+{%- set homePath = site.routes.home[locale] -%}
+{%- set altCode = 'fr' if locale == 'en' else 'en' -%}
+{%- set altPath = site.routes[pageKey][altCode] -%}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand-link" href="{{ homePath | url }}">
+      <img
+        src="{{ '/assets/img/ker-it-logo.png' | url }}"
+        alt="Kër IT"
+        class="brand-logo"
+        width="44"
+        height="35"
+      >
+      <span class="brand-wordmark">Kër IT</span>
+    </a>
+
+    <nav class="site-nav" aria-label="{{ 'Navigation principale' if locale == 'fr' else 'Primary navigation' }}">
+      <a href="{{ homePath | url }}#products">{{ t.nav.products }}</a>
+      <a href="{{ homePath | url }}#approach">{{ t.nav.approach }}</a>
+      <a href="{{ homePath | url }}#about">{{ t.nav.about }}</a>
+      <a href="{{ homePath | url }}#contact">{{ t.nav.contact }}</a>
+    </nav>
+
+    <div class="header-actions">
+      <a
+        href="{{ altPath | url }}"
+        class="lang-switch-link"
+        hreflang="{{ site.locales[altCode].htmlLang }}"
+        lang="{{ site.locales[altCode].htmlLang }}"
+        aria-label="{{ t.nav.langSwitchAria }}"
+      >
+        {{ t.nav.langSwitch }}
+      </a>
+
+      <button
+        type="button"
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="{{ t.nav.menuOpen }}"
+        data-label-open="{{ t.nav.menuOpen }}"
+        data-label-close="{{ t.nav.menuClose }}"
+      >
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-nav" class="mobile-nav" hidden>
+    <div class="container mobile-nav-inner">
+      <a href="{{ homePath | url }}#products">{{ t.nav.products }}</a>
+      <a href="{{ homePath | url }}#approach">{{ t.nav.approach }}</a>
+      <a href="{{ homePath | url }}#about">{{ t.nav.about }}</a>
+      <a href="{{ homePath | url }}#contact">{{ t.nav.contact }}</a>
+    </div>
+  </div>
+</header>

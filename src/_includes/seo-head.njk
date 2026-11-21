@@ -1,0 +1,57 @@
+{%- set t = i18n[locale] -%}
+{%- set currentLocale = site.locales[locale] -%}
+{%- set altCode = 'fr' if locale == 'en' else 'en' -%}
+{%- set altLocale = site.locales[altCode] -%}
+{%- set pageSeo = t.seo[pageKey] -%}
+{%- set currentPath = site.routes[pageKey][locale] -%}
+{%- set enPath = site.routes[pageKey].en -%}
+{%- set frPath = site.routes[pageKey].fr -%}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageSeo.title }}</title>
+<meta name="description" content="{{ pageSeo.description }}">
+{%- if noindex %}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
+
+<link rel="canonical" href="{{ currentPath | absUrl }}">
+<link rel="alternate" hreflang="en" href="{{ enPath | absUrl }}">
+<link rel="alternate" hreflang="fr" href="{{ frPath | absUrl }}">
+<link rel="alternate" hreflang="x-default" href="{{ enPath | absUrl }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="{{ currentLocale.ogLocale }}">
+<meta property="og:locale:alternate" content="{{ altLocale.ogLocale }}">
+<meta property="og:title" content="{{ pageSeo.title }}">
+<meta property="og:description" content="{{ pageSeo.description }}">
+<meta property="og:url" content="{{ currentPath | absUrl }}">
+<meta property="og:image" content="{{ site.ogImage | absUrl }}">
+<meta property="og:image:alt" content="Kër IT">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{{ pageSeo.title }}">
+<meta name="twitter:description" content="{{ pageSeo.description }}">
+<meta name="twitter:image" content="{{ site.ogImage | absUrl }}">
+
+<link rel="icon" type="image/png" href="{{ '/assets/img/ker-it-logo.png' | url }}">
+<link rel="apple-touch-icon" href="{{ '/assets/img/ker-it-logo.png' | url }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..600;1,9..40,400&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.name }}",
+  "url": "{{ '/' | absUrl }}",
+  "logo": "{{ site.ogImage | absUrl }}",
+  "email": "{{ site.contactEmail }}",
+  "description": "{{ pageSeo.description }}"
+}
+</script>
