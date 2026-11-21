@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title description">
+  <title id="title">WaveCue icon</title>
+  <desc id="description">A calm geometric breaking wave above a single ocean line.</desc>
+  <rect width="1024" height="1024" fill="#071F29"/>
+  <path d="M142 642C270 668 350 595 432 474C515 352 637 312 746 370C824 412 866 488 878 570C827 520 772 499 720 512C650 530 614 600 552 657C448 752 282 758 142 642Z" fill="#D7F7EF"/>
+  <path d="M168 748C330 695 468 770 620 716C718 681 792 690 856 712" fill="none" stroke="#28B8CF" stroke-width="44" stroke-linecap="round"/>
+</svg>

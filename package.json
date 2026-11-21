@@ -1,0 +1,20 @@
+{
+  "name": "ker-it-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/preview-server.mjs",
+    "start": "node scripts/preview-server.mjs",
+    "build": "eleventy",
+    "build:root": "PATH_PREFIX=/ SITE_URL=https://ker-it.example eleventy",
+    "check": "node scripts/check.mjs",
+    "lint": "node --check eleventy.config.js && node --check src/_data/site.js && node --check src/_data/portfolio.js && node --check src/_data/i18n.js && node --check src/assets/js/nav.js && node --check scripts/preview-server.mjs && node --check scripts/check.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}

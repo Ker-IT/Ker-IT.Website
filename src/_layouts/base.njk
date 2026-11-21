@@ -1,0 +1,20 @@
+{%- set t = i18n[locale] -%}
+<!DOCTYPE html>
+<html lang="{{ site.locales[locale].htmlLang }}">
+<head>
+  {% include "seo-head.njk" %}
+</head>
+<body>
+  <a class="skip-link" href="#main-content">{{ t.skipLink }}</a>
+
+  {% include "header.njk" %}
+
+  <main id="main-content" tabindex="-1">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+  <script src="{{ '/assets/js/nav.js' | url }}" defer></script>
+</body>
+</html>

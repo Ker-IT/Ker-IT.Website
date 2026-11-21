@@ -1,0 +1,55 @@
+{%- set t = i18n[locale] -%}
+{%- set homePath = site.routes.home[locale] -%}
+{%- set privacyPath = site.routes.privacy[locale] -%}
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="footer-brand-link" href="{{ homePath | url }}">
+          <img
+            src="{{ '/assets/img/ker-it-logo.png' | url }}"
+            alt="Kër IT"
+            class="footer-logo"
+            width="48"
+            height="38"
+            loading="lazy"
+          >
+          <span>Kër IT</span>
+        </a>
+        <p class="footer-desc">{{ t.footer.colBrandDesc }}</p>
+        <p class="footer-email">
+          <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">{{ t.footer.colProducts }}</h2>
+        <ul class="footer-list">
+          <li><a href="https://halfy.app/" target="_blank" rel="noopener noreferrer">Halfy</a></li>
+          <li><a href="https://halfy.app/safemeet/" target="_blank" rel="noopener noreferrer">SafeMeet</a></li>
+          <li><a href="https://halfy.app/#business" target="_blank" rel="noopener noreferrer">SafeMeet Business</a></li>
+          <li><a href="https://wavecue-web.vercel.app/" target="_blank" rel="noopener noreferrer">WaveCue</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">{{ t.footer.colCompany }}</h2>
+        <ul class="footer-list">
+          <li><a href="{{ homePath | url }}#approach">{{ t.footer.approachLink }}</a></li>
+          <li><a href="{{ homePath | url }}#about">{{ t.footer.aboutLink }}</a></li>
+          <li><a href="{{ homePath | url }}#contact">{{ t.footer.contactLink }}</a></li>
+          <li><a href="{{ privacyPath | url }}">{{ t.footer.privacyLink }}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ site.copyrightYear }} {{ t.footer.copyright }}</p>
+      <p class="footer-lang-note">
+        <a href="{{ site.routes[pageKey].en | url }}" hreflang="en" lang="en">English</a>
+        <span aria-hidden="true">·</span>
+        <a href="{{ site.routes[pageKey].fr | url }}" hreflang="fr" lang="fr">Français</a>
+      </p>
+    </div>
+  </div>
+</footer>

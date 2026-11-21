@@ -1,0 +1,181 @@
+export default {
+  families: [
+    {
+      id: "halfy",
+      name: "Halfy",
+      order: 1,
+      publicVisible: true,
+      primaryColor: "#2563EB",
+      secondaryColor: "#EE4949",
+      domain: {
+        fr: "Mobilité et organisation des rencontres",
+        en: "Mobility and meetup planning",
+      },
+      summary: {
+        fr: "Des outils conçus pour trouver un lieu de rendez-vous adapté à deux personnes, avec ou sans partage des adresses de départ.",
+        en: "Tools built to help two people agree on a meeting place, whether or not they choose to share their starting addresses.",
+      },
+      officialUrl: "https://halfy.app/",
+      screenshot: {
+        src: "/assets/img/halfy-mockup.png",
+        alt: {
+          fr: "Capture mobile de l'application Halfy calculant un point de rencontre à Bordeaux entre deux adresses",
+          en: "Mobile screenshot of the Halfy app calculating a midpoint meeting area in Bordeaux between two addresses",
+        },
+        caption: {
+          fr: "Halfy : calcul du point médian et recherche de lieux publics à proximité",
+          en: "Halfy: midpoint calculation and nearby public venues",
+        },
+      },
+    },
+    {
+      id: "wavecue",
+      name: "WaveCue",
+      order: 2,
+      publicVisible: true,
+      primaryColor: "#103F52",
+      secondaryColor: "#28B8CF",
+      accentSurface: "#071F29",
+      accentTint: "#D7F7EF",
+      domain: {
+        fr: "Données environnementales et prévisions de surf",
+        en: "Environmental data and surf forecasts",
+      },
+      summary: {
+        fr: "Une application consacrée à la lecture des conditions marines et météorologiques pour préparer ses sessions de surf.",
+        en: "An application dedicated to reading marine and weather conditions to help plan surf sessions.",
+      },
+      officialUrl: "https://wavecue-web.vercel.app/",
+      screenshot: null,
+    },
+  ],
+  products: [
+    {
+      id: "halfy",
+      name: "Halfy",
+      family: "halfy",
+      description: {
+        fr: "Trouvez un lieu de rendez-vous à mi-chemin entre deux points de départ. L'application calcule le point médian, affiche les trajets et propose des cafés, restaurants, bars ou parcs à proximité avec leurs informations pratiques.",
+        en: "Find a meeting spot halfway between two starting points. The application calculates the midpoint, displays routes and suggests nearby cafés, restaurants, bars or parks with practical venue details.",
+      },
+      status: {
+        key: "available_web_android",
+        fr: "Disponible sur le Web et Android",
+        en: "Available on the web and Android",
+      },
+      logo: {
+        src: "/assets/img/halfy-logo.png",
+        alt: "Halfy",
+        type: "wordmark",
+      },
+      primaryColor: "#2563EB",
+      officialUrl: "https://halfy.app/",
+      appUrl: "https://app.halfy.app/",
+      androidUrl: "https://play.google.com/store/apps/details?id=com.crankynx.halfy",
+      targetAudience: {
+        fr: "Particuliers",
+        en: "Consumers",
+      },
+      segment: "B2C",
+      order: 1,
+      publicVisible: true,
+    },
+    {
+      id: "safemeet",
+      name: "SafeMeet by Halfy",
+      family: "halfy",
+      description: {
+        fr: "Organisez une rencontre à deux sans communiquer votre adresse de départ à l'autre participant. Chacun renseigne son point de départ séparément via un lien d'invitation à usage unique afin de convenir d'un lieu public commun.",
+        en: "Arrange a two-person meetup without sharing your starting address with the other participant. Each person enters their starting point separately via a single-use invitation link to agree on a public venue.",
+      },
+      status: {
+        key: "available_web",
+        fr: "Disponible sur le Web",
+        en: "Available on the web",
+      },
+      logo: {
+        src: "/assets/img/safemeet-lockup.svg",
+        alt: "SafeMeet by Halfy",
+        type: "lockup",
+      },
+      primaryColor: "#2665EC",
+      officialUrl: "https://halfy.app/safemeet/",
+      appUrl: "https://app.halfy.app/meet",
+      targetAudience: {
+        fr: "Particuliers",
+        en: "Consumers",
+      },
+      segment: "B2C",
+      order: 2,
+      publicVisible: true,
+    },
+    {
+      id: "safemeet-business",
+      name: "SafeMeet Business",
+      family: "halfy",
+      description: {
+        fr: "Déclinaison professionnelle de SafeMeet pensée pour les plateformes de petites annonces et les marketplaces dont les utilisateurs organisent des remises en main propre, afin de faciliter le choix d'un lieu public sans échange d'adresses personnelles.",
+        en: "The professional edition of SafeMeet designed for classifieds platforms and marketplaces whose users arrange in-person handoffs, helping them agree on a public venue without exchanging home addresses.",
+      },
+      status: {
+        key: "in_preparation",
+        fr: "Offre professionnelle en préparation",
+        en: "Business offering in development",
+      },
+      logo: null,
+      primaryColor: "#1D4ED8",
+      officialUrl: "https://halfy.app/#business",
+      appUrl: null,
+      targetAudience: {
+        fr: "Marketplaces et plateformes de petites annonces",
+        en: "Marketplaces and classifieds platforms",
+      },
+      segment: "B2B",
+      order: 3,
+      publicVisible: true,
+    },
+    {
+      id: "wavecue",
+      name: "WaveCue",
+      family: "wavecue",
+      description: {
+        fr: "WaveCue rassemble les prévisions de houle, de vent et de marées issues d'Open-Meteo, les interprète selon le profil de chaque spot et propose un SurfScore ainsi que des prévisions horaires pour aider les surfeurs et pratiquants de bodyboard à choisir quand et où aller à l'eau.",
+        en: "WaveCue brings together swell, wind and tide forecasts from Open-Meteo, interprets them against each spot's calibration profile and provides a SurfScore alongside hourly forecasts to help surfers and bodyboarders decide when and where to go out.",
+      },
+      status: {
+        key: "in_development_web",
+        fr: "En développement · Application Web accessible",
+        en: "In development · Web application available",
+      },
+      logo: {
+        src: "/assets/img/wavecue-icon.svg",
+        alt: "WaveCue",
+        type: "icon",
+      },
+      primaryColor: "#103F52",
+      officialUrl: "https://wavecue-web.vercel.app/",
+      appUrl: "https://wavecue-web.vercel.app/",
+      targetAudience: {
+        fr: "Surfeurs et pratiquants de bodyboard",
+        en: "Surfers and bodyboarders",
+      },
+      segment: "B2C",
+      order: 1,
+      publicVisible: true,
+      features: {
+        fr: [
+          "Hauteur, période moyenne et direction de la houle",
+          "Vitesse et orientation du vent, phase de marée lorsqu'elle est disponible",
+          "SurfScore, calibration par spot et préférences surfeur enregistrées localement",
+          "Prévisions horaires et gestion de spots favoris (couverture en bêta)",
+        ],
+        en: [
+          "Swell height, mean period and swell direction",
+          "Wind speed and direction, plus tide phase when available",
+          "SurfScore, spot calibration profiles and locally saved surfer preferences",
+          "Hourly forecasts and favourite spots (spot coverage currently in beta)",
+        ],
+      },
+    },
+  ],
+};

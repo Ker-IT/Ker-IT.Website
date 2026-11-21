@@ -1,0 +1,272 @@
+{%- set t = i18n[locale] -%}
+{%- set families = portfolio.families | visibleFamilies -%}
+
+<section id="hero" class="hero-section">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ t.hero.kicker }}</p>
+      <h1 class="hero-title">{{ t.hero.title }}</h1>
+      <p class="hero-lead">{{ t.hero.lead }}</p>
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">{{ t.hero.primaryCta }}</a>
+        <a href="#about" class="btn btn-ghost">{{ t.hero.secondaryCta }}</a>
+      </div>
+    </div>
+
+    <div class="hero-emblem-frame">
+      <img
+        src="{{ '/assets/img/ker-it-logo.png' | url }}"
+        alt="Kër IT"
+        class="hero-emblem"
+        width="512"
+        height="410"
+      >
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section section-products">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">{{ t.products.sectionTitle }}</h2>
+      <p class="section-intro">{{ t.products.sectionIntro }}</p>
+    </header>
+
+    <div class="families-stack">
+      {%- for family in families -%}
+        {%- set familyProducts = portfolio.products | visibleProducts(family.id) -%}
+
+        {%- if family.id == 'halfy' -%}
+          <article class="family-block family-halfy" aria-labelledby="family-title-{{ family.id }}">
+            <div class="family-halfy-top">
+              <div class="family-halfy-intro">
+                <p class="meta-line">
+                  <span>{{ family.domain[locale] }}</span>
+                </p>
+                <h3 id="family-title-{{ family.id }}" class="family-title">{{ family.name }}</h3>
+                <p class="family-summary">{{ family.summary[locale] }}</p>
+
+                <div class="halfy-products-list">
+                  {%- for product in familyProducts -%}
+                    <div class="product-row product-row-{{ product.id }}">
+                      <div class="product-row-head">
+                        <div class="product-identity">
+                          {%- if product.logo -%}
+                            <img
+                              src="{{ product.logo.src | url }}"
+                              alt="{{ product.logo.alt }}"
+                              class="product-logo product-logo-{{ product.logo.type }}"
+                              loading="lazy"
+                            >
+                          {%- else -%}
+                            <h4 class="product-name-typo">{{ product.name }}</h4>
+                          {%- endif -%}
+                        </div>
+                        <p class="meta-line">
+                          <span>{{ product.segment }}</span>
+                          <span aria-hidden="true">·</span>
+                          <span>{{ product.status[locale] }}</span>
+                        </p>
+                      </div>
+
+                      <p class="product-desc">{{ product.description[locale] }}</p>
+
+                      <div class="product-links">
+                        {%- if product.id == 'halfy' -%}
+                          <a href="{{ product.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-halfy">
+                            {{ t.products.labels.officialSite }}
+                          </a>
+                          <a href="{{ product.appUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            {{ t.products.labels.openApp }}
+                          </a>
+                          <a href="{{ product.androidUrl }}" target="_blank" rel="noopener noreferrer" class="text-link">
+                            {{ t.products.labels.googlePlay }}
+                          </a>
+                        {%- elseif product.id == 'safemeet' -%}
+                          <a href="{{ product.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-halfy">
+                            {{ t.products.labels.officialSite }}
+                          </a>
+                          <a href="{{ product.appUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            {{ t.products.labels.openApp }}
+                          </a>
+                        {%- elseif product.id == 'safemeet-business' -%}
+                          <a href="{{ product.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            {{ t.products.labels.learnMore }}
+                          </a>
+                          <a href="mailto:{{ site.contactEmail }}?subject=SafeMeet%20Business" class="text-link">
+                            {{ t.products.labels.businessInquiry }}
+                          </a>
+                        {%- else -%}
+                          <a href="{{ product.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                            {{ t.products.labels.officialSite }}
+                          </a>
+                        {%- endif -%}
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                </div>
+              </div>
+
+              {%- if family.screenshot -%}
+                <figure class="family-halfy-media">
+                  <div class="phone-frame">
+                    <img
+                      src="{{ family.screenshot.src | url }}"
+                      alt="{{ family.screenshot.alt[locale] }}"
+                      class="phone-screen"
+                      width="360"
+                      height="780"
+                      loading="lazy"
+                    >
+                  </div>
+                  <figcaption class="media-caption">{{ family.screenshot.caption[locale] }}</figcaption>
+                </figure>
+              {%- endif -%}
+            </div>
+          </article>
+
+        {%- elseif family.id == 'wavecue' -%}
+          {%- set wc = familyProducts[0] -%}
+          <article class="family-block family-wavecue" aria-labelledby="family-title-{{ family.id }}">
+            <div class="wavecue-grid">
+              <div class="wavecue-main">
+                <p class="meta-line meta-line-light">
+                  <span>{{ family.domain[locale] }}</span>
+                  {%- if wc -%}
+                    <span aria-hidden="true">·</span>
+                    <span>{{ wc.status[locale] }}</span>
+                  {%- endif -%}
+                </p>
+
+                <div class="wavecue-brand-row">
+                  {%- if wc and wc.logo -%}
+                    <img
+                      src="{{ wc.logo.src | url }}"
+                      alt="{{ wc.logo.alt }}"
+                      class="wavecue-icon"
+                      width="48"
+                      height="48"
+                      loading="lazy"
+                    >
+                  {%- endif -%}
+                  <h3 id="family-title-{{ family.id }}" class="wavecue-wordmark">{{ family.name }}</h3>
+                </div>
+
+                <p class="wavecue-headline">{{ t.products.wavecueHeading }}</p>
+                <p class="wavecue-desc">{{ wc.description[locale] if wc else family.summary[locale] }}</p>
+                <p class="wavecue-caveat">{{ t.products.wavecueCaveat }}</p>
+
+                <div class="product-links">
+                  <a href="{{ family.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-wavecue">
+                    {{ t.products.labels.exploreWaveCue }}
+                  </a>
+                </div>
+              </div>
+
+              {%- if wc and wc.features and wc.features[locale] -%}
+                <div class="wavecue-specs">
+                  <h4 class="wavecue-specs-title">
+                    {{ 'Données et fonctionnalités visibles' if locale == 'fr' else 'Available forecast data and features' }}
+                  </h4>
+                  <ul class="wavecue-feature-list">
+                    {%- for feat in wc.features[locale] -%}
+                      <li>{{ feat }}</li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+            </div>
+          </article>
+
+        {%- else -%}
+          <article class="family-block family-generic" aria-labelledby="family-title-{{ family.id }}">
+            <p class="meta-line"><span>{{ family.domain[locale] }}</span></p>
+            <h3 id="family-title-{{ family.id }}" class="family-title">{{ family.name }}</h3>
+            <p class="family-summary">{{ family.summary[locale] }}</p>
+            <div class="halfy-products-list">
+              {%- for product in familyProducts -%}
+                <div class="product-row">
+                  <div class="product-row-head">
+                    <h4 class="product-name-typo">{{ product.name }}</h4>
+                    <p class="meta-line">
+                      <span>{{ product.segment }}</span>
+                      <span aria-hidden="true">·</span>
+                      <span>{{ product.status[locale] }}</span>
+                    </p>
+                  </div>
+                  <p class="product-desc">{{ product.description[locale] }}</p>
+                  {%- if product.officialUrl -%}
+                    <div class="product-links">
+                      <a href="{{ product.officialUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                        {{ t.products.labels.officialSite }}
+                      </a>
+                    </div>
+                  {%- endif -%}
+                </div>
+              {%- endfor -%}
+            </div>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section id="approach" class="section section-approach">
+  <div class="container">
+    <header class="section-header">
+      <h2 class="section-title">{{ t.approach.sectionTitle }}</h2>
+      <p class="section-intro">{{ t.approach.sectionIntro }}</p>
+    </header>
+
+    <div class="approach-grid">
+      {%- for item in t.approach.items -%}
+        <article class="approach-item">
+          <p class="approach-num">{{ item.number }}.</p>
+          <h3 class="approach-title">{{ item.title }}</h3>
+          <p class="approach-text">{{ item.text }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section section-about">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <h2 class="section-title">{{ t.about.sectionTitle }}</h2>
+      {%- for paragraph in t.about.paragraphs -%}
+        <p class="about-paragraph">{{ paragraph }}</p>
+      {%- endfor -%}
+    </div>
+
+    <aside class="about-facts-wrap" aria-label="{{ t.about.sectionTitle }}">
+      <dl class="facts-list">
+        {%- for fact in t.about.facts -%}
+          <div class="fact-row">
+            <dt class="fact-term">{{ fact.label }}</dt>
+            <dd class="fact-val">{{ fact.value }}</dd>
+          </div>
+        {%- endfor -%}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section id="contact" class="section section-contact">
+  <div class="container">
+    <div class="contact-panel">
+      <div class="contact-copy">
+        <h2 class="section-title">{{ t.contact.sectionTitle }}</h2>
+        <p class="contact-lead">{{ t.contact.lead }}</p>
+        <p class="contact-note">{{ t.contact.note }}</p>
+      </div>
+      <div class="contact-action">
+        <a href="mailto:{{ site.contactEmail }}" class="btn btn-primary">{{ t.contact.ctaLabel }}</a>
+        <p class="contact-address">
+          <a href="mailto:{{ site.contactEmail }}" class="text-link">{{ site.contactEmail }}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

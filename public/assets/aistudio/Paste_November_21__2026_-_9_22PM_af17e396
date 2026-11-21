@@ -1,0 +1,1085 @@
+# KER-WEB-01 : Refonte du site institutionnel de Kër IT
+
+## 1. Contexte
+
+Dépôt GitHub : `Ker-IT/Ker-IT.Website`
+
+Site actuel :
+https://ker-it.github.io/Ker-IT.Website/
+
+Kër IT est un projet d'entreprise technologique européenne actuellement en cours de formation.
+
+Son objectif est de concevoir, développer et commercialiser ses propres produits logiciels, destinés aussi bien aux particuliers qu'aux professionnels.
+
+L'ambition à long terme est de construire une entreprise technologique indépendante, rentable, capable de développer plusieurs produits et de se positionner sur des marchés internationaux.
+
+Kër IT n'est pas une agence de développement informatique proposant des prestations à des clients.
+
+Kër IT n'est pas une holding, un fonds d'investissement ou un incubateur de startups externes.
+
+La société n'est pas encore immatriculée.
+
+## 2. Objectif du chantier
+
+Transformer la landing page actuelle en un véritable site institutionnel professionnel, bilingue et évolutif.
+
+Le site doit :
+
+- Présenter Kër IT et sa vocation.
+- Présenter ses produits logiciels.
+- Expliquer son approche technologique.
+- Distinguer les produits disponibles des produits en développement.
+- Permettre aux partenaires potentiels de prendre contact.
+- Préparer l'évolution future de l'entreprise.
+- Donner à Kër IT une identité indépendante de ses produits.
+
+Le site doit pouvoir évoluer progressivement avec la croissance de l'entreprise, sans nécessiter une refonte complète à chaque lancement de produit.
+
+Il ne doit pas présenter Kër IT comme une grande entreprise déjà établie.
+
+## 3. Audit préalable obligatoire
+
+Avant toute modification :
+
+- Examiner l'intégralité du dépôt existant.
+- Inventorier les pages HTML.
+- Examiner les CSS et JavaScript.
+- Inventorier récursivement le répertoire `./assets`.
+- Identifier le logo officiel Kër IT.
+- Identifier les logos des produits disponibles.
+- Examiner le README.
+- Examiner le fichier LICENSE.
+- Examiner la politique de confidentialité existante.
+- Identifier le fonctionnement actuel de GitHub Pages.
+- Identifier les mécanismes actuels d'internationalisation.
+- Examiner les éventuels workflows GitHub Actions.
+
+Le dépôt existant constitue la source de vérité technique.
+
+Ne pas recréer le projet à partir de zéro en ignorant ses ressources.
+
+Signaler les éventuelles incohérences documentaires ou juridiques sans les corriger arbitrairement.
+
+## 4. Consultation des sites produits
+
+Avant de rédiger les contenus commerciaux, consulter les sites suivants afin de comprendre les produits et leurs fonctionnalités réelles.
+
+### Halfy
+
+https://halfy.app/
+
+https://halfy.app/fr/
+
+https://halfy.app/halfy/
+
+https://app.halfy.app/
+
+### SafeMeet
+
+https://halfy.app/safemeet/
+
+https://halfy.app/fr/safemeet/
+
+https://app.halfy.app/meet
+
+### WaveCue
+
+https://wavecue-web.vercel.app/
+
+Examiner notamment :
+
+- Le positionnement des produits.
+- Leur identité graphique.
+- Leurs fonctionnalités visibles.
+- Les informations disponibles.
+- Leurs logos officiels.
+- Les captures d'écran pertinentes.
+- Leur niveau de maturité apparent.
+
+Ne pas inventer de fonctionnalités absentes de ces sites.
+
+Ne pas déduire une disponibilité commerciale du simple fait qu'une application Web est accessible.
+
+Si certaines pages ne sont pas accessibles depuis Google AI Studio, le signaler explicitement et utiliser uniquement les informations vérifiées fournies dans ce prompt.
+
+Les sites produits constituent des références documentaires et graphiques. Ils ne doivent pas être modifiés.
+
+## 5. Architecture technique cible
+
+Privilégier une architecture proche de celle utilisée pour Halfy-Website :
+
+- Eleventy v3 ou version stable compatible.
+- Templates Nunjucks.
+- HTML statique généré.
+- CSS natif.
+- JavaScript natif.
+- Composants mutualisés.
+- Internationalisation statique FR/EN.
+- GitHub Pages.
+- Génération dans `_site/`.
+- Configuration centralisée des produits et des routes.
+
+Ne pas introduire :
+
+- React.
+- Vite.
+- Next.js.
+- Angular.
+- Vue.
+- Firebase.
+- Cloud Run.
+- Base de données.
+- Backend permanent.
+- Gemini API.
+- Dépendance à un service d'intelligence artificielle.
+
+Google AI Studio est uniquement utilisé comme outil de développement et de prévisualisation.
+
+Si un adaptateur de prévisualisation est nécessaire, celui-ci doit rester indépendant de l'hébergement de production.
+
+Éviter toute complexité technique disproportionnée pour un site institutionnel statique.
+
+## 6. Compatibilité GitHub Pages
+
+Le site est actuellement hébergé sous :
+
+https://ker-it.github.io/Ker-IT.Website/
+
+Aucun domaine personnalisé n'est confirmé pour le moment.
+
+Prendre impérativement en compte le sous-chemin `/Ker-IT.Website/` dans :
+
+- Les assets.
+- Les liens internes.
+- Les feuilles CSS.
+- Les scripts.
+- Les métadonnées.
+- Le sitemap.
+- Les chemins canoniques.
+- Les liens entre les versions linguistiques.
+
+Prévoir une configuration centralisée permettant de passer ultérieurement à un domaine personnalisé sans réécrire les templates.
+
+Le site doit fonctionner aussi bien :
+
+- Dans la prévisualisation Google AI Studio.
+- Dans un environnement de développement local.
+- Sur GitHub Pages avec son sous-chemin actuel.
+- Sur un futur domaine personnalisé.
+
+Ne pas modifier les paramètres distants de GitHub Pages.
+
+Ne pas modifier les DNS.
+
+## 7. Recherche éditoriale obligatoire
+
+Avant toute rédaction, consulter intégralement les deux références suivantes.
+
+### Français
+
+https://fr.wikipedia.org/wiki/Aide:Identifier_l%27usage_d%27une_IA_g%C3%A9n%C3%A9rative
+
+### Anglais
+
+https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing
+
+Identifier les principaux clichés, marqueurs linguistiques et habitudes rédactionnelles des textes générés par intelligence artificielle.
+
+Adapter ces recommandations au contexte d'un site institutionnel technologique.
+
+L'objectif n'est pas de reproduire un style encyclopédique, mais de produire des contenus naturels, précis et crédibles.
+
+Éviter notamment :
+
+- Les slogans creux.
+- Les superlatifs injustifiés.
+- Les constructions grammaticales répétitives.
+- Les promesses vagues.
+- Les accumulations artificielles de trois adjectifs.
+- Les tirets cadratins systématiques.
+- Les expressions promotionnelles génériques.
+- Les traductions littérales de l'anglais.
+- Les répétitions du même bénéfice sous différentes formes.
+- Le jargon excessif des startups.
+
+Éviter les formulations telles que :
+
+### Français
+
+- Façonner le monde de demain.
+- Révolutionner votre quotidien.
+- Au cœur de l'innovation.
+- Repousser les limites.
+- Une vision audacieuse.
+- Un écosystème innovant.
+- Bien plus qu'une entreprise technologique.
+- Construire ensemble le futur numérique.
+- Des solutions intelligentes et disruptives.
+
+### Anglais
+
+- Building the digital future.
+- Unlocking the potential.
+- Cutting-edge solutions.
+- Empowering innovation.
+- Shaping tomorrow.
+- Pioneering the future.
+- Seamless experiences.
+- More than just a technology company.
+- Transforming the way we live.
+- In today's fast-paced world.
+
+Ces expressions ne doivent pas être remplacées mécaniquement par d'autres clichés.
+
+Chaque phrase doit apporter une information concrète.
+
+Utiliser un français naturel adapté à la France et à la Belgique.
+
+Utiliser un anglais international avec des conventions orthographiques britanniques cohérentes.
+
+Si les références Wikipédia ne peuvent pas être consultées, le signaler dans le rapport.
+
+Créer `docs/EDITORIAL_GUIDELINES.md` et imposer son respect dans `AGENTS.md`.
+
+Cette règle doit s'appliquer à tous les futurs agents de développement travaillant sur le dépôt.
+
+## 8. Direction artistique
+
+Créer une identité institutionnelle propre à Kër IT, distincte des sites Halfy et WaveCue.
+
+### Références d'inspiration
+
+- https://abc.xyz/
+- https://37signals.com/
+- https://bendingspoons.com/
+- https://mistral.ai/
+
+Examiner notamment leur manière de présenter :
+
+- Leur identité institutionnelle.
+- Leur portefeuille de produits.
+- Leur activité technologique.
+- Leur approche éditoriale.
+- Leur navigation.
+- Leur hiérarchie typographique.
+
+Ces références constituent uniquement des sources d'inspiration.
+
+Ne pas copier leurs interfaces, leurs logos, leurs textes ou leurs identités graphiques.
+
+### Direction recherchée
+
+Le site Kër IT doit être :
+
+- Institutionnel.
+- Contemporain.
+- Sobre.
+- Reconnaissable.
+- Professionnel.
+- Évolutif.
+
+Privilégier :
+
+- Une palette institutionnelle cohérente avec le logo officiel.
+- Une dominante sombre si elle est compatible avec l'identité existante.
+- Des contrastes lisibles.
+- Une typographie affirmée.
+- Une hiérarchie visuelle claire.
+- Des sections aérées.
+- Une présentation distincte pour chaque produit.
+- Des captures authentiques des applications.
+- Une utilisation mesurée des couleurs propres à chaque produit.
+
+Ne pas imposer une identité sombre si celle-ci dégrade la lisibilité du logo officiel.
+
+### Éléments à éviter
+
+- Les dégradés violets génériques des sites générés par IA.
+- Les effets glassmorphism excessifs.
+- Les animations décoratives permanentes.
+- Les arrière-plans animés inutiles.
+- Les illustrations abstraites sans signification.
+- Les représentations génériques de cerveaux artificiels.
+- Les cartes identiques répétées à l'infini.
+- Les photographies fictives d'équipes ou de bureaux.
+- Les faux témoignages.
+- Les logos de partenaires inexistants.
+- Les chiffres commerciaux inventés.
+- Les compteurs artificiels.
+- Les badges promotionnels inutiles.
+
+Le résultat doit ressembler au site d'un éditeur de logiciels indépendant, et non à un template générique de startup.
+
+## 9. Logos et assets officiels
+
+Inventorier les ressources graphiques existantes avant toute création.
+
+Utiliser prioritairement :
+
+- Le logo officiel Kër IT.
+- Les logos officiels Halfy.
+- Les logos officiels SafeMeet.
+- Le logo officiel WaveCue, s'il est disponible.
+
+Examiner les sites produits pour identifier les ressources officielles.
+
+Les logos peuvent être récupérés depuis les sites produits appartenant à Kër IT lorsque leur provenance est vérifiable.
+
+Préférer des copies locales versionnées plutôt que des ressources chargées dynamiquement depuis les autres sites.
+
+Ne pas :
+
+- Générer de nouveau logo Kër IT.
+- Redessiner les logos existants.
+- Modifier leurs couleurs.
+- Modifier leurs proportions.
+- Inventer un logo SafeMeet Business.
+- Inventer un logo WaveCue.
+- Utiliser des emojis comme logos.
+- Générer de fausses captures d'écran applicatives.
+
+Si un logo officiel n'est pas accessible, utiliser temporairement une présentation typographique sobre.
+
+Documenter les assets utilisés dans `docs/BRAND_ASSETS.md`.
+
+## 10. Architecture officielle des marques
+
+Kër IT possède actuellement deux familles de produits.
+
+### Famille Halfy
+
+#### Halfy
+
+Halfy est une application permettant de trouver un lieu de rencontre à mi-chemin entre deux points de départ.
+
+Elle permet notamment de découvrir des lieux où deux personnes peuvent se retrouver.
+
+Disponible sur le Web et Android.
+
+Site officiel :
+
+https://halfy.app/
+
+Application Web :
+
+https://app.halfy.app/
+
+Ne pas présenter Halfy comme une application de partage de frais.
+
+Halfway est uniquement un terme descriptif anglais et non une marque indépendante.
+
+#### SafeMeet by Halfy
+
+SafeMeet permet à deux personnes d'organiser une rencontre sans communiquer directement leur point de départ à l'autre participant.
+
+Chaque participant renseigne ses informations séparément afin de trouver un lieu de rencontre commun.
+
+Disponible sur le Web.
+
+Site officiel :
+
+https://halfy.app/safemeet/
+
+Application Web :
+
+https://app.halfy.app/meet
+
+Private Meet est l'ancien nom de SafeMeet.
+
+Ne pas réintroduire cette ancienne appellation dans les contenus publics.
+
+Ne pas prétendre que SafeMeet garantit la sécurité physique des rencontres.
+
+#### SafeMeet Business
+
+SafeMeet Business est la déclinaison professionnelle de SafeMeet.
+
+Elle est notamment destinée aux plateformes de petites annonces et aux marketplaces dont les utilisateurs organisent des remises en main propre.
+
+L'offre professionnelle est en préparation.
+
+Un démonstrateur commercial simulé a été développé.
+
+Ne pas annoncer sans vérification :
+
+- Une API publique disponible.
+- Un SDK public.
+- Une intégration partenaire en production.
+- Une offre en marque blanche.
+- Des webhooks disponibles.
+- Une souscription professionnelle.
+- Des clients existants.
+- Des résultats commerciaux mesurés.
+
+Ne pas ajouter de lien vers le démonstrateur tant que sa publication et son exposition commerciale n'ont pas été validées.
+
+### Famille WaveCue
+
+#### WaveCue
+
+WaveCue est un produit consacré aux prévisions de surf et à l'aide au choix des sessions.
+
+Il exploite notamment, selon les fonctionnalités réellement disponibles :
+
+- Les données de houle.
+- Les prévisions météorologiques.
+- Le vent.
+- Les marées.
+- Les conditions de surf.
+- Les prévisions horaires.
+- Les informations associées aux spots.
+- Le SurfScore.
+
+Application Web :
+
+https://wavecue-web.vercel.app/
+
+Le site Web est accessible publiquement.
+
+Présenter WaveCue comme un produit en développement disposant d'une application Web accessible.
+
+Ne pas annoncer une disponibilité commerciale définitive, un abonnement payant ou une application mobile publiée sans preuve.
+
+Ne pas inventer de précision scientifique, de fiabilité mesurée ou de couverture géographique exhaustive.
+
+Consulter l'application existante pour adapter précisément sa description.
+
+### Périmètre strict du portefeuille
+
+Seuls Halfy, SafeMeet, SafeMeet Business et WaveCue doivent être présentés.
+
+Ne pas rechercher d'autres projets dans les dépôts GitHub pour les rattacher automatiquement à Kër IT.
+
+Ne pas intégrer de produits appartenant à des tiers.
+
+Ne pas présenter les expérimentations internes comme des produits commercialisés.
+
+## 11. Organisation du portefeuille
+
+Présenter deux familles de produits, et non quatre entreprises indépendantes.
+
+### Halfy
+
+Domaine : mobilité et organisation des rencontres.
+
+Produits :
+
+- Halfy.
+- SafeMeet.
+- SafeMeet Business.
+
+### WaveCue
+
+Domaine : données environnementales et prévisions de surf.
+
+Produit :
+
+- WaveCue.
+
+Préparer une configuration centralisée permettant d'ajouter facilement de futures familles de produits.
+
+Chaque produit doit pouvoir disposer des propriétés suivantes :
+
+- Identifiant.
+- Nom officiel.
+- Famille de produits.
+- Description FR.
+- Description EN.
+- Statut.
+- Logo.
+- Couleur principale.
+- URL officielle.
+- URL applicative.
+- Public cible.
+- Type B2C ou B2B.
+- Ordre d'affichage.
+- Visibilité publique.
+
+Ne pas créer de base de données pour cette configuration.
+
+Utiliser un fichier de données statique compatible Eleventy.
+
+## 12. Présentation des statuts
+
+Distinguer clairement les statuts suivants.
+
+### Halfy
+
+FR : Disponible sur le Web et Android.
+
+EN : Available on the web and Android.
+
+### SafeMeet
+
+FR : Disponible sur le Web.
+
+EN : Available on the web.
+
+### SafeMeet Business
+
+FR : Offre professionnelle en préparation.
+
+EN : Business offering in development.
+
+### WaveCue
+
+FR : En développement. Application Web accessible.
+
+EN : In development. Web application available.
+
+Les formulations peuvent être adaptées pour améliorer leur naturel.
+
+Ne pas inventer de lancement commercial.
+
+Ne pas abuser des badges de statut. Une indication textuelle discrète peut suffire.
+
+## 13. Page d'accueil institutionnelle
+
+Créer une page d'accueil bilingue organisée autour des sections suivantes.
+
+### Section 1 : Hero institutionnel
+
+Présenter Kër IT comme une future entreprise technologique orientée produit.
+
+Proposition éditoriale française :
+
+**Nous développons nos propres produits logiciels.**
+
+Kër IT conçoit des applications qui utilisent les données et les technologies numériques pour répondre à des besoins concrets.
+
+Proposition éditoriale anglaise :
+
+**We build our own software products.**
+
+Kër IT develops applications that use data and technology to solve practical problems.
+
+Ces formulations constituent une base de travail.
+
+Les améliorer si une proposition plus naturelle, plus distinctive et plus précise est possible.
+
+Ne pas utiliser un slogan générique qui pourrait convenir à n'importe quelle entreprise informatique.
+
+CTA principal :
+
+FR : Découvrir nos produits.
+
+EN : Explore our products.
+
+Destination : section produits.
+
+CTA secondaire facultatif :
+
+FR : À propos de Kër IT.
+
+EN : About Kër IT.
+
+Ne pas surcharger le hero.
+
+Éviter les grandes illustrations abstraites et les représentations génériques d'intelligence artificielle.
+
+### Section 2 : Nos produits
+
+Cette section constitue l'élément central du site.
+
+Présenter deux grands univers graphiques.
+
+#### Univers Halfy
+
+Utiliser les couleurs et logos officiels Halfy et SafeMeet.
+
+Présenter les trois produits de manière cohérente.
+
+Halfy :
+
+Trouvez un lieu où vous retrouver à mi-chemin entre deux points de départ.
+
+SafeMeet :
+
+Organisez une rencontre sans partager votre point de départ avec l'autre participant.
+
+SafeMeet Business :
+
+Découvrez comment SafeMeet pourrait s'intégrer aux parcours de rencontre et de remise en main propre des plateformes professionnelles.
+
+Prévoir des liens directs vers les pages officielles disponibles.
+
+Utiliser les véritables captures des applications si elles sont accessibles.
+
+#### Univers WaveCue
+
+Respecter l'identité graphique réelle de WaveCue.
+
+Présenter WaveCue comme un produit indépendant de Halfy.
+
+Proposition française :
+
+**Préparez votre prochaine session de surf.**
+
+WaveCue rassemble les prévisions de houle, de vent et de marées pour aider les surfeurs à choisir quand et où pratiquer.
+
+Proposition anglaise :
+
+**Plan your next surf session.**
+
+WaveCue brings together swell, wind and tide forecasts to help surfers decide when and where to surf.
+
+Adapter ces descriptions après consultation de l'application.
+
+CTA FR :
+
+Découvrir WaveCue.
+
+CTA EN :
+
+Explore WaveCue.
+
+Destination :
+
+https://wavecue-web.vercel.app/
+
+Présenter une véritable capture de l'application si elle est accessible.
+
+Ne pas créer de fausse interface WaveCue.
+
+### Section 3 : Notre approche
+
+Présenter les principes qui orientent le développement des produits Kër IT.
+
+#### Développement de produits
+
+Kër IT développe ses propres logiciels et les fait évoluer en fonction des usages et des besoins identifiés.
+
+#### Données et aide à la décision
+
+Les produits exploitent notamment des données géographiques, météorologiques et contextuelles pour aider les utilisateurs à prendre des décisions.
+
+#### Confidentialité
+
+La conception des produits doit tenir compte des informations réellement nécessaires à leur fonctionnement et de leur exposition aux autres utilisateurs.
+
+Ne pas annoncer de certification ou de conformité juridique non vérifiée.
+
+#### Intelligence artificielle
+
+Kër IT souhaite explorer les usages de l'intelligence artificielle dans ses produits et dans le développement de nouveaux services.
+
+Présenter notamment comme axes d'exploration :
+
+- Les interfaces en langage naturel.
+- L'interprétation de données.
+- L'assistance à la prise de décision.
+- L'automatisation.
+- Les agents logiciels.
+- L'intégration de services dans des assistants IA.
+
+Ces éléments représentent une orientation technologique et non un catalogue de fonctionnalités disponibles.
+
+Ne pas annoncer :
+
+- Un modèle d'intelligence artificielle propriétaire.
+- Une plateforme IA déjà commercialisée.
+- Un laboratoire de recherche constitué.
+- Une équipe de chercheurs.
+- Une technologie brevetée.
+- Des performances comparables aux grands acteurs de l'IA.
+
+Ne pas inventer de nouveaux produits IA pour remplir le site.
+
+### Section 4 : À propos de Kër IT
+
+Présenter le projet d'entreprise.
+
+Expliquer que Kër IT est actuellement en cours de formation et se consacre au développement de produits logiciels propres.
+
+Mettre en avant une démarche orientée produit et une ambition de développement à long terme.
+
+Ne pas présenter l'entreprise comme une agence informatique.
+
+Ne pas annoncer d'effectif, de chiffre d'affaires, de financement ou de présence internationale non vérifiés.
+
+Ne pas annoncer une future introduction en bourse sur le site.
+
+Cette ambition relève de la stratégie interne de l'entreprise.
+
+### Section 5 : Contact
+
+Prévoir un moyen simple de prendre contact avec Kër IT.
+
+Le contact peut concerner :
+
+- Les produits.
+- Les partenariats.
+- Les intégrations professionnelles.
+- Les opportunités de collaboration.
+
+Utiliser exclusivement les coordonnées existantes et vérifiées.
+
+Ne pas inventer d'adresse email sous un domaine personnalisé.
+
+Ne pas créer de formulaire nécessitant un backend.
+
+### Section 6 : Footer
+
+Prévoir une organisation institutionnelle simple.
+
+Rubriques possibles :
+
+- Kër IT.
+- Produits.
+- Halfy.
+- SafeMeet.
+- SafeMeet Business.
+- WaveCue.
+- Contact.
+- Confidentialité.
+
+Afficher uniquement les liens réellement disponibles.
+
+Mentionner le statut de société en cours de formation.
+
+Préserver une cohérence entre les versions française et anglaise.
+
+## 14. Navigation
+
+Créer une navigation principale simple.
+
+### Français
+
+- Produits.
+- Notre approche.
+- À propos.
+- Contact.
+- EN.
+
+### Anglais
+
+- Products.
+- Our approach.
+- About.
+- Contact.
+- FR.
+
+Le logo Kër IT doit rediriger vers l'accueil dans la langue active.
+
+Utiliser des liens vers les sections de la landing page tant que des pages dédiées ne sont pas nécessaires.
+
+Ne pas créer de menu déroulant complexe pour seulement deux familles de produits.
+
+Préserver une navigation mobile accessible.
+
+Ne pas introduire de bouton Ouvrir Halfy dans le header institutionnel.
+
+Halfy et WaveCue doivent disposer d'une visibilité cohérente dans le portefeuille de produits.
+
+## 15. Design system
+
+Créer un design system propre à Kër IT.
+
+Prévoir des variables CSS centralisées pour :
+
+- Couleurs institutionnelles.
+- Couleurs des produits.
+- Typographie.
+- Espacements.
+- Rayons.
+- Bordures.
+- Ombres.
+- Largeurs de contenu.
+- Points de rupture responsive.
+- États interactifs.
+- États focus.
+
+Créer uniquement les composants réellement utiles :
+
+- Header.
+- Footer.
+- Hero institutionnel.
+- Section produit.
+- Carte produit lorsque nécessaire.
+- Indication de statut.
+- Boutons.
+- Composants éditoriaux.
+- Métadonnées SEO.
+
+Éviter une abstraction excessive.
+
+Le design system doit permettre l'ajout d'un nouveau produit sans modifier l'ensemble du site.
+
+## 16. Internationalisation
+
+Prévoir :
+
+- Anglais à la racine du site.
+- Français sous `/fr/`.
+
+Générer statiquement les pages dans chaque langue.
+
+Ne pas utiliser un moteur de traduction dynamique côté navigateur pour les contenus principaux.
+
+Préserver l'accès aux anciennes URLs importantes et légales.
+
+Mettre en place :
+
+- Hreflang EN.
+- Hreflang FR.
+- Hreflang x-default.
+- URL canoniques.
+- Changement de langue.
+- Métadonnées localisées.
+- Sitemap.
+- Robots.txt.
+- Open Graph.
+- Métadonnées de partage.
+
+Respecter le sous-chemin GitHub Pages actuel.
+
+Ne pas mélanger les langues dans une même interface.
+
+Les noms propres des produits ne doivent pas être traduits.
+
+## 17. SEO
+
+Préparer des métadonnées sobres et factuelles.
+
+Exemple FR :
+
+Title :
+
+Kër IT | Développement de produits logiciels
+
+Description :
+
+Kër IT développe Halfy, SafeMeet et WaveCue, des produits logiciels consacrés à l'organisation des rencontres et aux prévisions de surf.
+
+Exemple EN :
+
+Title :
+
+Kër IT | Software product development
+
+Description :
+
+Kër IT develops Halfy, SafeMeet and WaveCue, software products for arranging meetups and planning surf sessions.
+
+Adapter les formulations selon les contenus définitifs.
+
+Ne pas accumuler des mots-clés artificiels.
+
+Ne pas annoncer de services informatiques qui ne sont pas proposés.
+
+Ne pas inventer d'adresse, de domaine ou de compte social.
+
+Préparer une image Open Graph institutionnelle à partir du véritable logo Kër IT si un asset adapté existe.
+
+## 18. Confidentialité et statut juridique
+
+Kër IT est une société en cours de formation.
+
+Cette information est exacte et doit être conservée.
+
+Ne pas inventer :
+
+- Numéro d'entreprise.
+- Numéro de TVA.
+- Adresse du siège.
+- Forme juridique.
+- Pays d'immatriculation définitif.
+- Date d'immatriculation.
+- Identité de salariés.
+- Informations concernant des investisseurs.
+- Informations concernant des clients.
+
+Examiner la politique de confidentialité existante.
+
+Préserver les dispositions existantes tant que leur modification n'a pas été explicitement validée.
+
+Ne pas supprimer les informations permettant d'identifier le responsable actuel du service lorsque celles-ci sont nécessaires.
+
+Signaler les éventuelles incohérences et les obligations restant à vérifier.
+
+Ne pas ajouter Google Analytics, de pixels publicitaires ou de nouveaux outils de tracking dans ce lot.
+
+Ne pas ajouter de cookies non nécessaires.
+
+## 19. Structure documentaire permanente
+
+Créer ou compléter :
+
+- `README.md`
+- `AGENTS.md`
+- `docs/ARCHITECTURE.md`
+- `docs/EDITORIAL_GUIDELINES.md`
+- `docs/BRAND_ASSETS.md`
+- `docs/PRODUCT_PORTFOLIO.md`
+- `docs/BACKLOG.md`
+
+Documenter notamment :
+
+- La structure du site.
+- Les conventions éditoriales.
+- Les références Wikipédia.
+- L'architecture des marques.
+- Le périmètre officiel du portefeuille.
+- Les statuts réels des produits.
+- Les URLs officielles.
+- Les logos utilisés.
+- Les conventions de design.
+- Les commandes de développement.
+- Le fonctionnement du sous-chemin GitHub Pages.
+- La préparation d'un futur domaine personnalisé.
+
+Ajouter dans AGENTS.md les règles permanentes suivantes :
+
+- Kër IT est une société en cours de formation.
+- Kër IT développe ses propres produits logiciels.
+- Halfy et WaveCue constituent les deux familles de produits actuellement présentées.
+- SafeMeet et SafeMeet Business appartiennent à la famille Halfy.
+- Halfway n'est pas une marque indépendante.
+- Private Meet est l'ancien nom de SafeMeet.
+- Aucun produit tiers ne doit être ajouté sans autorisation.
+- Toute nouvelle fonctionnalité commerciale annoncée doit être vérifiée.
+- Toute rédaction publique doit respecter la charte éditoriale FR/EN.
+- Les logos officiels doivent être préservés.
+
+## 20. Tests et prévisualisation
+
+Mettre en place des commandes reproductibles :
+
+- `npm run dev`
+- `npm run build`
+- `npm run check`
+- `npm run lint`, si pertinent.
+
+Vérifier :
+
+- Le build statique.
+- Les pages françaises et anglaises.
+- Les liens internes.
+- Les assets.
+- Les liens vers Halfy.
+- Les liens vers SafeMeet.
+- Le lien vers WaveCue.
+- Les métadonnées.
+- Le sitemap.
+- Le changement de langue.
+- La navigation mobile.
+- L'accessibilité au clavier.
+- Les contrastes.
+- La compatibilité GitHub Pages.
+- Le fonctionnement sous `/Ker-IT.Website/`.
+- La prévisualisation Google AI Studio.
+
+Contrôler autant que possible les largeurs suivantes :
+
+- 375 px.
+- 640 px.
+- 768 px.
+- 1024 px.
+- 1440 px.
+- 1920 px.
+
+Vérifier l'absence de débordement horizontal.
+
+Ne pas masquer artificiellement les problèmes responsive avec overflow-x: hidden.
+
+Ne pas déclarer de test navigateur réussi s'il n'a pas été exécuté.
+
+## 21. Déploiement GitHub Pages
+
+Examiner le mécanisme actuel de publication.
+
+Préparer, si nécessaire, un workflow GitHub Actions permettant :
+
+- La validation du code lors des pull requests.
+- L'installation reproductible des dépendances.
+- La génération Eleventy.
+- L'exécution des contrôles automatisés.
+- La création de l'artefact `_site/`.
+- Le déploiement GitHub Pages après validation.
+- Le déclenchement manuel si nécessaire.
+
+Ne pas supposer que GitHub Pages est déjà configuré pour GitHub Actions.
+
+Documenter précisément la procédure de migration depuis la publication historique.
+
+Ne pas supprimer les fichiers actuellement nécessaires à la publication sans avoir identifié les conséquences.
+
+La version publique actuelle doit rester accessible jusqu'à la validation de la nouvelle version.
+
+Prévoir une procédure de retour arrière.
+
+Ne réaliser aucune action distante.
+
+## 22. Roadmap future
+
+Créer une roadmap indépendante des projets Halfy et WaveCue.
+
+Proposition initiale :
+
+- KER-WEB-01 : Site institutionnel et portefeuille de produits.
+- KER-WEB-02 : Validation graphique et éditoriale.
+- KER-WEB-03 : Migration et publication GitHub Pages.
+- KER-WEB-04 : Domaine personnalisé et adresses email professionnelles.
+- KER-WEB-05 : Mise à jour du statut juridique après constitution.
+- KER-WEB-06 : Présentation des capacités technologiques réelles.
+- KER-WEB-07 : Partenariats et recrutement lorsque nécessaire.
+- KER-WEB-08 : Relations investisseurs à long terme, si pertinent.
+
+Ne pas implémenter les lots ultérieurs.
+
+## 23. Hors périmètre
+
+Ne pas développer :
+
+- Un portail investisseurs.
+- Un site de recrutement.
+- Un espace client.
+- Un système de paiement.
+- Un chatbot IA.
+- Une API.
+- Un blog rempli d'articles générés artificiellement.
+- Des pages de prestations informatiques.
+- Une boutique.
+- Un backend.
+- Une souscription commerciale.
+- Un portail d'incubation.
+- Un service de conseil informatique.
+- Un nouveau produit.
+- Une nouvelle fonctionnalité Halfy ou WaveCue.
+
+Ne pas modifier les dépôts Halfy, SafeMeet ou WaveCue.
+
+Ne pas modifier les logos originaux.
+
+Ne pas modifier les DNS.
+
+Ne pas effectuer de commit, push, synchronisation GitHub ou déploiement sans autorisation explicite.
+
+## 24. Livrables attendus
+
+Fournir un rapport détaillé en français comprenant :
+
+1. Audit du site initial.
+2. Sites produits effectivement consultés.
+3. Inventaire des assets existants.
+4. Logos officiels identifiés.
+5. Direction artistique retenue.
+6. Justification du positionnement institutionnel.
+7. Architecture technique.
+8. Présentation du portefeuille Halfy et WaveCue.
+9. Description de la place accordée à l'intelligence artificielle.
+10. Textes institutionnels français et anglais.
+11. Arborescence finale.
+12. Liste des fichiers créés et modifiés.
+13. Résultats des tests.
+14. Vérifications responsive.
+15. Compatibilité avec le sous-chemin GitHub Pages.
+16. État de préparation du déploiement.
+17. Limitations de Google AI Studio.
+18. Risques résiduels.
+19. Mise à jour de la roadmap.
+20. Proposition de message de commit en français.
+
+Rendre le nouveau site immédiatement accessible dans la prévisualisation Google AI Studio.
+
+Commencer uniquement l'implémentation du lot KER-WEB-01.
