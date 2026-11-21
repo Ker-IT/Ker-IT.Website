@@ -12,8 +12,8 @@ export default {
         en: "Mobility and meetup planning",
       },
       summary: {
-        fr: "Des outils conçus pour trouver un lieu de rendez-vous adapté à deux personnes, avec ou sans partage des adresses de départ.",
-        en: "Tools built to help two people agree on a meeting place, whether or not they choose to share their starting addresses.",
+        fr: "Des applications conçues pour convenir d'un lieu de rencontre à deux, avec ou sans partage des adresses de départ.",
+        en: "Applications designed to help two people agree on a meeting place, with or without sharing starting addresses.",
       },
       officialUrl: "https://halfy.app/",
       screenshot: {
@@ -23,7 +23,7 @@ export default {
           en: "Mobile screenshot of the Halfy app calculating a midpoint meeting area in Bordeaux between two addresses",
         },
         caption: {
-          fr: "Halfy : calcul du point médian et recherche de lieux publics à proximité",
+          fr: "Halfy : calcul du point médian et lieux publics à proximité",
           en: "Halfy: midpoint calculation and nearby public venues",
         },
       },
@@ -42,7 +42,7 @@ export default {
         en: "Environmental data and surf forecasts",
       },
       summary: {
-        fr: "Une application consacrée à la lecture des conditions marines et météorologiques pour préparer ses sessions de surf.",
+        fr: "Une application dédiée à la lecture des conditions marines et météorologiques pour préparer ses sessions de surf.",
         en: "An application dedicated to reading marine and weather conditions to help plan surf sessions.",
       },
       officialUrl: "https://wavecue-web.vercel.app/",
@@ -55,8 +55,8 @@ export default {
       name: "Halfy",
       family: "halfy",
       description: {
-        fr: "Trouvez un lieu de rendez-vous à mi-chemin entre deux points de départ. L'application calcule le point médian, affiche les trajets et propose des cafés, restaurants, bars ou parcs à proximité avec leurs informations pratiques.",
-        en: "Find a meeting spot halfway between two starting points. The application calculates the midpoint, displays routes and suggests nearby cafés, restaurants, bars or parks with practical venue details.",
+        fr: "Calcule un point de rencontre équitable entre deux adresses de départ et suggère des cafés, restaurants, bars ou parcs à proximité avec leurs informations pratiques.",
+        en: "Calculates a fair midpoint between two starting locations and suggests nearby cafés, restaurants, bars or parks with practical venue details.",
       },
       status: {
         key: "available_web_android",
@@ -85,8 +85,8 @@ export default {
       name: "SafeMeet by Halfy",
       family: "halfy",
       description: {
-        fr: "Organisez une rencontre à deux sans communiquer votre adresse de départ à l'autre participant. Chacun renseigne son point de départ séparément via un lien d'invitation à usage unique afin de convenir d'un lieu public commun.",
-        en: "Arrange a two-person meetup without sharing your starting address with the other participant. Each person enters their starting point separately via a single-use invitation link to agree on a public venue.",
+        fr: "Permet à deux participants de saisir séparément leur point de départ via un lien à usage unique afin de choisir un lieu public sans exposer leurs adresses.",
+        en: "Lets two participants enter their starting points separately via a single-use link to agree on a public meeting place without exposing personal addresses.",
       },
       status: {
         key: "available_web",
@@ -114,8 +114,8 @@ export default {
       name: "SafeMeet Business",
       family: "halfy",
       description: {
-        fr: "Déclinaison professionnelle de SafeMeet pensée pour les plateformes de petites annonces et les marketplaces dont les utilisateurs organisent des remises en main propre, afin de faciliter le choix d'un lieu public sans échange d'adresses personnelles.",
-        en: "The professional edition of SafeMeet designed for classifieds platforms and marketplaces whose users arrange in-person handoffs, helping them agree on a public venue without exchanging home addresses.",
+        fr: "Déclinaison professionnelle en préparation pour les marketplaces et plateformes de petites annonces dont les utilisateurs organisent des remises en main propre dans un lieu public.",
+        en: "Professional edition in preparation for marketplaces and classifieds platforms whose users arrange in-person handoffs at public locations.",
       },
       status: {
         key: "in_preparation",
@@ -139,8 +139,8 @@ export default {
       name: "WaveCue",
       family: "wavecue",
       description: {
-        fr: "WaveCue rassemble les prévisions de houle, de vent et de marées issues d'Open-Meteo, les interprète selon le profil de chaque spot et propose un SurfScore ainsi que des prévisions horaires pour aider les surfeurs et pratiquants de bodyboard à choisir quand et où aller à l'eau.",
-        en: "WaveCue brings together swell, wind and tide forecasts from Open-Meteo, interprets them against each spot's calibration profile and provides a SurfScore alongside hourly forecasts to help surfers and bodyboarders decide when and where to go out.",
+        fr: "WaveCue rassemble les données de houle, de vent et de marées issues d'Open-Meteo avec des profils de spots et un SurfScore pour aider les surfeurs et pratiquants de bodyboard à choisir leur session.",
+        en: "WaveCue brings together Open-Meteo swell, wind and tide data with spot profiles and a SurfScore to help surfers and bodyboarders choose when and where to go out.",
       },
       status: {
         key: "in_development_web",
@@ -164,16 +164,14 @@ export default {
       publicVisible: true,
       features: {
         fr: [
-          "Hauteur, période moyenne et direction de la houle",
-          "Vitesse et orientation du vent, phase de marée lorsqu'elle est disponible",
-          "SurfScore, calibration par spot et préférences surfeur enregistrées localement",
-          "Prévisions horaires et gestion de spots favoris (couverture en bêta)",
+          "Hauteur, période et direction de houle, vent et marée",
+          "Prévisions horaires et lecture SurfScore par spot",
+          "Préférences surfeur et spots favoris enregistrés localement",
         ],
         en: [
-          "Swell height, mean period and swell direction",
-          "Wind speed and direction, plus tide phase when available",
-          "SurfScore, spot calibration profiles and locally saved surfer preferences",
-          "Hourly forecasts and favourite spots (spot coverage currently in beta)",
+          "Swell height, period and direction, wind and tide phase",
+          "Hourly forecasts and spot-level SurfScore reading",
+          "Locally saved surfer preferences and favourite spots",
         ],
       },
     },

@@ -13,15 +13,63 @@
       </div>
     </div>
 
-    <div class="hero-emblem-frame">
-      <img
-        src="{{ '/assets/img/ker-it-logo.png' | url }}"
-        alt="Kër IT"
-        class="hero-emblem"
-        width="512"
-        height="410"
-      >
-    </div>
+    <aside class="hero-composition" aria-label="{{ t.hero.visual.caption }}">
+      <p class="hero-comp-label">{{ t.hero.visual.caption }}</p>
+
+      <div class="hero-comp-panels">
+        <a href="#family-title-halfy" class="hero-comp-panel hero-comp-halfy">
+          <div class="hero-comp-head">
+            <img
+              src="{{ '/assets/img/halfy-logo.png' | url }}"
+              alt="Halfy"
+              class="hero-comp-logo-halfy"
+              width="86"
+              height="32"
+            >
+            <span class="hero-comp-domain">{{ t.hero.visual.halfyDomain }}</span>
+          </div>
+          <div class="hero-comp-artwork" aria-hidden="true">
+            <svg viewBox="0 0 280 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-comp-svg">
+              <rect width="280" height="112" rx="8" fill="#F4F7FE"/>
+              <path d="M24 26H256M24 56H256M24 86H256M72 12V100M140 12V100M208 12V100" stroke="#DCE5FA" stroke-width="1"/>
+              <path d="M46 82C78 78 96 58 140 56" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M234 30C202 34 184 54 140 56" stroke="#EE4949" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="46" cy="82" r="5" fill="#2563EB"/>
+              <circle cx="234" cy="30" r="5" fill="#EE4949"/>
+              <circle cx="140" cy="56" r="14" fill="#2563EB" fill-opacity="0.14"/>
+              <circle cx="140" cy="56" r="6" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
+            </svg>
+          </div>
+          <p class="hero-comp-summary">{{ t.hero.visual.halfySummary }}</p>
+        </a>
+
+        <a href="#family-title-wavecue" class="hero-comp-panel hero-comp-wavecue">
+          <div class="hero-comp-head">
+            <span class="hero-comp-wc-brand">
+              <img
+                src="{{ '/assets/img/wavecue-icon.svg' | url }}"
+                alt="WaveCue"
+                class="hero-comp-logo-wavecue"
+                width="28"
+                height="28"
+              >
+              <span class="hero-comp-wc-name">WaveCue</span>
+            </span>
+            <span class="hero-comp-domain hero-comp-domain-light">{{ t.hero.visual.wavecueDomain }}</span>
+          </div>
+          <div class="hero-comp-artwork" aria-hidden="true">
+            <svg viewBox="0 0 280 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-comp-svg">
+              <rect width="280" height="112" rx="8" fill="#0B2A36"/>
+              <path d="M16 40H264M16 68H264M16 92H264" stroke="#D7F7EF" stroke-opacity="0.12" stroke-width="1"/>
+              <path d="M16 74C46 58 76 58 106 70C136 82 166 44 196 48C226 52 244 68 264 60" stroke="#28B8CF" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 86C52 78 86 88 124 78C162 68 192 84 226 76C244 72 254 74 264 78" stroke="#D7F7EF" stroke-opacity="0.65" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="196" cy="48" r="4.5" fill="#D7F7EF"/>
+            </svg>
+          </div>
+          <p class="hero-comp-summary hero-comp-summary-light">{{ t.hero.visual.wavecueSummary }}</p>
+        </a>
+      </div>
+    </aside>
   </div>
 </section>
 
@@ -163,18 +211,25 @@
                 </div>
               </div>
 
-              {%- if wc and wc.features and wc.features[locale] -%}
-                <div class="wavecue-specs">
-                  <h4 class="wavecue-specs-title">
-                    {{ 'Données et fonctionnalités visibles' if locale == 'fr' else 'Available forecast data and features' }}
-                  </h4>
+              <div class="wavecue-visual-card">
+                <div class="wavecue-graphic" aria-hidden="true">
+                  <svg viewBox="0 0 360 132" fill="none" xmlns="http://www.w3.org/2000/svg" class="wavecue-graphic-svg">
+                    <rect width="360" height="132" rx="8" fill="#071F29"/>
+                    <path d="M20 36H340M20 68H340M20 100H340" stroke="#D7F7EF" stroke-opacity="0.1" stroke-width="1"/>
+                    <path d="M20 88C56 66 94 68 130 82C168 96 204 42 246 48C284 54 312 76 340 62" stroke="#28B8CF" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M20 102C64 90 106 106 154 92C200 78 242 98 286 88C308 82 324 84 340 88" stroke="#D7F7EF" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="246" cy="48" r="6" fill="#D7F7EF"/>
+                  </svg>
+                </div>
+
+                {%- if wc and wc.features and wc.features[locale] -%}
                   <ul class="wavecue-feature-list">
                     {%- for feat in wc.features[locale] -%}
                       <li>{{ feat }}</li>
                     {%- endfor -%}
                   </ul>
-                </div>
-              {%- endif -%}
+                {%- endif -%}
+              </div>
             </div>
           </article>
 
@@ -259,7 +314,6 @@
       <div class="contact-copy">
         <h2 class="section-title">{{ t.contact.sectionTitle }}</h2>
         <p class="contact-lead">{{ t.contact.lead }}</p>
-        <p class="contact-note">{{ t.contact.note }}</p>
       </div>
       <div class="contact-action">
         <a href="mailto:{{ site.contactEmail }}" class="btn btn-primary">{{ t.contact.ctaLabel }}</a>

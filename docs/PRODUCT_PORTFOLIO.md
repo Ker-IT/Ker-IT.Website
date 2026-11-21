@@ -11,6 +11,8 @@ Le portefeuille public de Kër IT est organisé en **deux familles de produits**
 | **Halfy** | Mobilité et organisation des rencontres | **SafeMeet Business** | B2B | Offre professionnelle en préparation | Business offering in development | `https://halfy.app/#business` |
 | **WaveCue** | Données environnementales et prévisions de surf | **WaveCue** | B2C | En développement · Application Web accessible | In development · Web application available | `https://wavecue-web.vercel.app/` |
 
+Les fiches produits privilégient une description concise et factuelle sur la page d'accueil afin de préserver le rôle institutionnel du site sans dupliquer la documentation de chaque application.
+
 ## 2. Configuration statique centralisée (`src/_data/portfolio.js`)
 
 Chaque entrée produit dans `src/_data/portfolio.js` expose les propriétés suivantes :

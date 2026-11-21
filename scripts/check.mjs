@@ -95,6 +95,12 @@ function verifyBuild({ outDir, prefix, siteUrl }) {
     /révolutionne/i,
     /cutting-edge/i,
     /shaping tomorrow/i,
+    /proprietary software/i,
+    /verified contact address/i,
+    /adresse de contact vérifiée/i,
+    /development agency/i,
+    /holding company/i,
+    /incubateur/i,
   ];
 
   const requiredExternalUrls = [
