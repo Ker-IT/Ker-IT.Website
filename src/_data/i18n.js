@@ -13,9 +13,9 @@ export default {
     },
     seo: {
       home: {
-        title: "Kër IT | Software product development",
+        title: "Kër IT | Software for real-world decisions",
         description:
-          "Kër IT develops Halfy, SafeMeet and WaveCue, software products for arranging meetups and planning surf sessions.",
+          "Kër IT develops Halfy, SafeMeet and WaveCue, software products that turn geographic, weather and marine data into practical decisions.",
       },
       privacy: {
         title: "Privacy Policy | Kër IT",
@@ -25,15 +25,22 @@ export default {
     },
     hero: {
       kicker: "Kër IT · Company in formation",
-      title: "We build our own software products.",
-      lead: "Kër IT designs and develops software applications for consumers and businesses, relying on geographic, environmental and contextual data to answer practical needs.",
+      title: "Software for real-world decisions.",
+      lead: "From finding a place to meet to choosing the right conditions for a surf session, we build software that makes complex data useful.",
       primaryCta: "Explore our products",
       secondaryCta: "About Kër IT",
+      visual: {
+        caption: "Two product families · Illustrative overview",
+        halfyDomain: "Mobility & meetups",
+        halfySummary: "Fair midpoints and private location coordination",
+        wavecueDomain: "Marine & surf forecasts",
+        wavecueSummary: "Swell, wind, tide and SurfScore readings",
+      },
     },
     products: {
       sectionTitle: "Our products",
       sectionIntro:
-        "Our portfolio is currently organised around two independent product families: Halfy for meetup planning and WaveCue for surf forecasting.",
+        "Our work is organised around two product families: Halfy for meetup planning and WaveCue for surf forecasting.",
       labels: {
         officialSite: "Official site",
         openApp: "Open web app",
@@ -44,55 +51,54 @@ export default {
       },
       wavecueHeading: "Plan your next surf session.",
       wavecueCaveat:
-        "WaveCue is in active development (beta spot coverage). Forecasts help inform decisions and do not guarantee water safety.",
+        "In development with beta spot coverage. Forecasts support decision-making and do not guarantee water safety.",
     },
     approach: {
       sectionTitle: "Our approach",
       sectionIntro:
-        "Four working principles guide how we design, ship and maintain software at Kër IT.",
+        "Four principles guide how we design, build and maintain software at Kër IT.",
       items: [
         {
           number: "01",
           title: "Product development",
-          text: "Kër IT builds and operates its own software rather than delivering client consultancy work. Products evolve incrementally based on observed usage and real constraints.",
+          text: "Kër IT designs, builds and maintains its own software products, refining them over time based on real-world use.",
         },
         {
           number: "02",
           title: "Data and decision support",
-          text: "Our applications combine geographic, weather and contextual data to help people make straightforward everyday decisions, whether picking a meeting venue or evaluating sea conditions.",
+          text: "Our applications turn geographic, weather and contextual data into clear information that helps users make practical decisions.",
         },
         {
           number: "03",
           title: "Data minimisation",
-          text: "Software design starts by asking what information is genuinely required to run a feature and what should remain unexposed to other participants.",
+          text: "We design features around the minimum information needed to run them, limiting what personal data is exposed to other participants.",
         },
         {
           number: "04",
           title: "Applied artificial intelligence",
-          text: "As a technological direction, Kër IT explores how artificial intelligence can support existing and future products across six areas: natural-language interfaces, data interpretation, decision support, workflow automation, software agents and integration into AI assistants. These remain active areas of exploration rather than commercialised standalone AI products.",
+          text: "We explore how software agents, natural language interfaces and artificial intelligence could improve the way our products use data and serve their users.",
         },
       ],
     },
     about: {
       sectionTitle: "About Kër IT",
       paragraphs: [
-        "Kër IT is a European technology venture currently in formation. Its purpose is to design, develop and operate its own software products for both consumers and professional platforms.",
-        "Rather than operating as a development agency, a holding company or an external startup incubator, Kër IT concentrates on building independent, sustainable software products with an international outlook.",
+        "Kër IT is a European technology venture focused on designing and developing software products.",
+        "We develop Halfy and WaveCue with particular attention to useful data, software quality and user privacy.",
       ],
       facts: [
         { label: "Status", value: "Company in formation" },
-        { label: "Focus", value: "Proprietary software products (B2C & B2B)" },
+        { label: "Activity", value: "Own software products (B2C and B2B)" },
         { label: "Product families", value: "Halfy and WaveCue" },
       ],
     },
     contact: {
       sectionTitle: "Contact",
-      lead: "For enquiries regarding our products, partnerships, SafeMeet Business pilot integrations or collaboration opportunities, reach us directly by email.",
+      lead: "For enquiries about our products, partnerships or SafeMeet Business pilot integrations, please contact us by email.",
       ctaLabel: "Write to Kër IT",
-      note: "Verified contact address for Kër IT (company in formation).",
     },
     footer: {
-      colBrandDesc: "Independent software product development. Company in formation.",
+      colBrandDesc: "Software product development. Company in formation.",
       colProducts: "Products",
       colCompany: "Kër IT",
       approachLink: "Our approach",
@@ -149,9 +155,9 @@ export default {
     },
     seo: {
       home: {
-        title: "Kër IT | Développement de produits logiciels",
+        title: "Kër IT | Des logiciels pour les décisions du quotidien",
         description:
-          "Kër IT développe Halfy, SafeMeet et WaveCue, des produits logiciels consacrés à l'organisation des rencontres et aux prévisions de surf.",
+          "Kër IT développe Halfy, SafeMeet et WaveCue, des produits logiciels qui transforment les données géographiques et marines en informations utiles.",
       },
       privacy: {
         title: "Politique de confidentialité | Kër IT",
@@ -161,26 +167,33 @@ export default {
     },
     hero: {
       kicker: "Kër IT · Société en cours de formation",
-      title: "Nous développons nos propres produits logiciels.",
-      lead: "Kër IT conçoit et développe des applications destinées aux particuliers et aux professionnels, en s'appuyant sur des données géographiques, environnementales et contextuelles pour répondre à des besoins concrets.",
+      title: "Des logiciels pour les décisions du quotidien.",
+      lead: "Qu'il s'agisse de trouver un lieu de rencontre ou de choisir les conditions d'une session de surf, nous développons des logiciels qui rendent les données utiles.",
       primaryCta: "Découvrir nos produits",
       secondaryCta: "À propos de Kër IT",
+      visual: {
+        caption: "Deux familles de produits · Aperçu illustratif",
+        halfyDomain: "Mobilité et rencontres",
+        halfySummary: "Point de rencontre équitable et coordination privée",
+        wavecueDomain: "Prévisions surf et météo marine",
+        wavecueSummary: "Houle, vent, marées et lecture SurfScore",
+      },
     },
     products: {
       sectionTitle: "Nos produits",
       sectionIntro:
-        "Le portefeuille de Kër IT s'organise actuellement autour de deux familles de produits distinctes : Halfy pour l'organisation des rencontres et WaveCue pour les prévisions de surf.",
+        "Notre activité s'organise autour de deux familles de produits : Halfy pour l'organisation des rencontres et WaveCue pour les prévisions de surf.",
       labels: {
         officialSite: "Site officiel",
         openApp: "Ouvrir l'application Web",
         learnMore: "En savoir plus",
         googlePlay: "Android (Google Play)",
-        businessInquiry: "Échanger sur une intégration",
+        businessInquiry: "Échanger sur un projet pilote",
         exploreWaveCue: "Découvrir WaveCue",
       },
       wavecueHeading: "Préparez votre prochaine session de surf.",
       wavecueCaveat:
-        "WaveCue est en développement actif (couverture des spots en bêta). Les prévisions aident à décider sans garantir votre sécurité en mer.",
+        "En développement avec une couverture de spots en bêta. Les prévisions aident à décider sans garantir la sécurité en mer.",
     },
     approach: {
       sectionTitle: "Notre approche",
@@ -190,42 +203,41 @@ export default {
         {
           number: "01",
           title: "Développement de produits",
-          text: "Kër IT conçoit et exploite ses propres logiciels et ne propose pas de prestations de développement sur mesure. Chaque produit évolue progressivement en fonction des usages observés.",
+          text: "Kër IT conçoit, développe et fait évoluer ses propres produits logiciels en fonction des usages observés.",
         },
         {
           number: "02",
           title: "Données et aide à la décision",
-          text: "Nos applications s'appuient sur des données géographiques, météorologiques et contextuelles pour faciliter des choix concrets, qu'il s'agisse de trouver un lieu de rendez-vous ou d'évaluer des conditions maritimes.",
+          text: "Nos applications transforment des données géographiques, météorologiques et contextuelles en informations claires pour faciliter des choix concrets.",
         },
         {
           number: "03",
-          title: "Confidentialité par conception",
-          text: "La conception de nos services tient compte des informations strictement nécessaires à leur fonctionnement et limite l'exposition des données personnelles aux autres participants.",
+          title: "Minimisation des données",
+          text: "Nous concevons nos fonctionnalités autour des informations strictement nécessaires à leur exécution, afin de limiter l'exposition des données personnelles aux autres utilisateurs.",
         },
         {
           number: "04",
-          title: "Intelligence artificielle",
-          text: "Dans une perspective d'évolution technologique, Kër IT explore l'usage de l'intelligence artificielle autour de six axes : interfaces en langage naturel, interprétation de données, assistance à la prise de décision, automatisation, agents logiciels et intégration de services dans des assistants IA. Ces axes traduisent une orientation technique et non une gamme de produits IA commercialisés.",
+          title: "Intelligence artificielle appliquée",
+          text: "Nous explorons comment les agents logiciels, les interfaces en langage naturel et l'intelligence artificielle peuvent améliorer l'utilisation des données et les fonctionnalités de nos produits.",
         },
       ],
     },
     about: {
       sectionTitle: "À propos de Kër IT",
       paragraphs: [
-        "Kër IT est un projet d'entreprise technologique européenne actuellement en cours de formation. Son activité est consacrée à la conception, au développement et à la mise sur le marché de ses propres produits logiciels.",
-        "Kër IT n'est ni une agence de services informatiques, ni une holding, ni un incubateur de projets externes. L'objectif est de construire sur le long terme une structure indépendante capable de développer plusieurs logiciels destinés à un public international.",
+        "Kër IT est un projet d'entreprise technologique européenne consacré à la conception et au développement de produits logiciels.",
+        "Nous développons Halfy et WaveCue avec une attention particulière portée à l'utilité des données, à la qualité des logiciels et à la confidentialité des utilisateurs.",
       ],
       facts: [
         { label: "Statut", value: "Société en cours de formation" },
-        { label: "Activité", value: "Édition de produits logiciels propres (B2C et B2B)" },
+        { label: "Activité", value: "Produits logiciels propres (B2C et B2B)" },
         { label: "Familles de produits", value: "Halfy et WaveCue" },
       ],
     },
     contact: {
       sectionTitle: "Contact",
-      lead: "Pour toute demande concernant nos produits, un partenariat, une intégration SafeMeet Business ou une collaboration, vous pouvez nous écrire directement.",
+      lead: "Pour toute question concernant nos produits, un partenariat ou une intégration pilote de SafeMeet Business, vous pouvez nous écrire par courrier électronique.",
       ctaLabel: "Contacter Kër IT",
-      note: "Adresse de contact vérifiée de Kër IT (société en cours de formation).",
     },
     footer: {
       colBrandDesc: "Conception et développement de produits logiciels. Société en cours de formation.",

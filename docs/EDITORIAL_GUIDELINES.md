@@ -43,9 +43,11 @@ Ne pas utiliser :
 ## 4. Précision factuelle obligatoire
 
 - Chaque phrase doit apporter une information concrète et vérifiable.
-- Kër IT est présentée comme une **société en cours de formation** qui développe **ses propres produits logiciels** (jamais comme une agence, une holding financière, un cabinet de conseil ou un incubateur externe).
+- Éviter les justifications défensives ou formulées comme des consignes internes (ex. : *Verified contact address*, comparaisons négatives répétées avec des agences, holdings ou incubateurs).
+- Ne pas utiliser l'expression *proprietary software* lorsque la titularité ou les licences des composants ne sont pas formalisées ; privilégier *own software products* / « propres produits logiciels ».
+- Kër IT est présentée comme une **société en cours de formation** qui développe **ses propres produits logiciels**.
 - **Halfy** : recherche de lieu de rencontre à mi-chemin (Web et Android). Ne jamais la présenter comme une application de partage de frais. `Halfway` n'est qu'un mot descriptif.
 - **SafeMeet by Halfy** : rencontre à deux sans partage des adresses de départ (Web). Ne jamais utiliser l'ancien nom *Private Meet*. Ne jamais prétendre garantir la sécurité physique des rencontres.
 - **SafeMeet Business** : offre professionnelle en préparation pour marketplaces et petites annonces. Ne pas annoncer d'API publique, SDK, marque blanche, webhooks ou clients en production sans validation.
 - **WaveCue** : produit en développement disposant d'une application Web accessible (`wavecue-web.vercel.app`). Mentionner la couverture bêta et le fait que les prévisions ne garantissent pas la sécurité en mer.
-- **Intelligence artificielle** : présenter uniquement les six axes d'exploration technologique (interfaces en langage naturel, interprétation de données, aide à la décision, automatisation, agents logiciels, intégration dans des assistants IA), sans annoncer de modèle propriétaire ni de plateforme IA commercialisée.
+- **Intelligence artificielle** : présenter uniquement l'orientation technologique d'exploration (agents logiciels, interfaces en langage naturel, usage des données), sans annoncer de modèle propriétaire ni de plateforme IA commercialisée.

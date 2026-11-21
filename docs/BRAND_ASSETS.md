@@ -44,9 +44,11 @@ Le logo officiel Kër IT étant composé sur fond blanc avec un vert forêt prof
 - **Halfy / SafeMeet** : bleu `#2563EB` (`--color-halfy`), accent `#EE4949` (`--color-safemeet-accent`), fond teinté `#F4F7FE` (`--color-halfy-tint`).
 - **WaveCue** : bleu abyssal `#071F29` (`--color-wavecue-bg`), surface `#0C2B38` (`--color-wavecue-surface`), cyan `#28B8CF` (`--color-wavecue-cyan`), menthe `#D7F7EF` (`--color-wavecue-mint`).
 
-## 4. Règles de préservation
+## 4. Règles de préservation et éléments en attente
 
 - Ne pas modifier les couleurs ni les proportions des logos existants.
 - Ne pas inventer de logo pour **SafeMeet Business** (présentation typographique sobre).
-- Ne pas inventer de logo supplémentaire ni de fausse interface pour **WaveCue** (utilisation de `wavecue-icon.svg` + wordmark typographique).
+- Ne pas inventer de logo supplémentaire ni de fausse interface applicative pour **WaveCue** (utilisation de `wavecue-icon.svg` + wordmark typographique).
+- Les visuels géométriques du hero (courbes de trajet Halfy et courbes de houle WaveCue) ainsi que le tracé illustratif de la fiche WaveCue sont purement illustratifs et ne contiennent aucune donnée opérationnelle fictive.
+- **Asset en attente** : aucune capture PNG/WebP officielle de **WaveCue** n'étant disponible dans le dépôt ni réalisable sans navigateur headless dans l'environnement Google AI Studio, une véritable capture d'une page de prévisions représentative de `https://wavecue-web.vercel.app/` reste à ajouter dès que possible.
 - Ne pas utiliser d'emojis en guise de logos.
